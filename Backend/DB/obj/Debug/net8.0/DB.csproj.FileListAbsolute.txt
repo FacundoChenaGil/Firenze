@@ -1,0 +1,15 @@
+C:\Firenze\Backend\DB\bin\Debug\net8.0\DB.deps.json
+C:\Firenze\Backend\DB\bin\Debug\net8.0\DB.runtimeconfig.json
+C:\Firenze\Backend\DB\bin\Debug\net8.0\DB.dll
+C:\Firenze\Backend\DB\bin\Debug\net8.0\DB.pdb
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.csproj.AssemblyReference.cache
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.GeneratedMSBuildEditorConfig.editorconfig
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.AssemblyInfoInputs.cache
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.AssemblyInfo.cs
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.csproj.CoreCompileInputs.cache
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.sourcelink.json
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.dll
+C:\Firenze\Backend\DB\obj\Debug\net8.0\refint\DB.dll
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.pdb
+C:\Firenze\Backend\DB\obj\Debug\net8.0\DB.genruntimeconfig.cache
+C:\Firenze\Backend\DB\obj\Debug\net8.0\ref\DB.dll
