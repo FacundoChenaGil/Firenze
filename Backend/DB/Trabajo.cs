@@ -21,5 +21,7 @@ namespace DB
 
         [ForeignKey("Id_Tipo_Trabajo_Tr")]
         public virtual Tipo_Trabajo Tipo_Trabajo { get; set; }
+        public virtual ICollection<Tarjeta_Trabajo> Tarjetas_Trabajo { get; set; }
+        public virtual ICollection<TrabajoXTurno> TrabajosXTurnos { get; set; }
     }
 }
