@@ -11,6 +11,9 @@ namespace DB
     {
         [Key]
         public int Id_Estado_Turno_Et { get; set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Descripcion_Et { get; set; }
         public virtual ICollection<Turno> Turnos { get; set; }
     }

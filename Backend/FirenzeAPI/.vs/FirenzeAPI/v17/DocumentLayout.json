@@ -3,7 +3,31 @@
   "WorkspaceRootPath": "C:\\Firenze\\Backend\\FirenzeAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\firenzecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Firenze\\Backend\\DB\\Migrations\\20250204161551_Add_Nullable_Usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\trabajoxturno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\trabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\tipo_usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\estado_turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\tarjeta_trabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\tipo_trabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,14 +42,118 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "FirenzeContext.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\FirenzeContext.cs",
-              "RelativeDocumentMoniker": "..\\DB\\FirenzeContext.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\DB\\FirenzeContext.cs",
-              "RelativeToolTip": "..\\DB\\FirenzeContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wA8AAABBAAAAAAAAAA==",
+              "Title": "20250204161551_Add_Nullable_Usuarios.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Migrations\\20250204161551_Add_Nullable_Usuarios.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Migrations\\20250204161551_Add_Nullable_Usuarios.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Migrations\\20250204161551_Add_Nullable_Usuarios.cs",
+              "RelativeToolTip": "..\\DB\\Migrations\\20250204161551_Add_Nullable_Usuarios.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T15:14:04.988Z",
+              "WhenOpened": "2025-02-04T16:15:51.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Estado_Turno.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Estado_Turno.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Estado_Turno.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Estado_Turno.cs",
+              "RelativeToolTip": "..\\DB\\Estado_Turno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T16:11:34.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Tarjeta_Trabajo.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Tarjeta_Trabajo.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Tarjeta_Trabajo.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Tarjeta_Trabajo.cs",
+              "RelativeToolTip": "..\\DB\\Tarjeta_Trabajo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T16:08:12.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Tipo_Trabajo.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Tipo_Trabajo.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Tipo_Trabajo.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Tipo_Trabajo.cs",
+              "RelativeToolTip": "..\\DB\\Tipo_Trabajo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T16:07:54.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Tipo_Usuario.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Tipo_Usuario.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Tipo_Usuario.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Tipo_Usuario.cs",
+              "RelativeToolTip": "..\\DB\\Tipo_Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T16:07:40.877Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Trabajo.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Trabajo.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Trabajo.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Trabajo.cs",
+              "RelativeToolTip": "..\\DB\\Trabajo.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAADwvxUAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T15:18:24.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TrabajoXTurno.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\TrabajoXTurno.cs",
+              "RelativeDocumentMoniker": "..\\DB\\TrabajoXTurno.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\TrabajoXTurno.cs",
+              "RelativeToolTip": "..\\DB\\TrabajoXTurno.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T15:18:20.115Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Turno.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Turno.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Turno.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Turno.cs",
+              "RelativeToolTip": "..\\DB\\Turno.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABcAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T15:13:34.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Usuario.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Usuario.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Usuario.cs",
+              "RelativeToolTip": "..\\DB\\Usuario.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwB4AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T14:00:31.431Z",
               "EditorCaption": ""
             }
           ]

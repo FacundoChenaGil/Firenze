@@ -11,6 +11,9 @@ namespace DB
     {
         [Key]
         public int Id_Tipo_Trabajo_Ttr { get; set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Descripcion_Ttr { get; set; }
         public virtual ICollection<Trabajo> Trabajos { get; set; }
     }

@@ -4,6 +4,7 @@ using DB;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DB.Migrations
 {
     [DbContext(typeof(FirenzeContext))]
-    partial class FirenzeContextModelSnapshot : ModelSnapshot
+    [Migration("20250204161241_added_Restrictions")]
+    partial class added_Restrictions
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -203,6 +206,7 @@ namespace DB.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id_Usuario_Us"));
 
                     b.Property<string>("Apellido_Us")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
@@ -220,6 +224,7 @@ namespace DB.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre_Us")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 
@@ -229,6 +234,7 @@ namespace DB.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("Telefono_Us")
+                        .IsRequired()
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
 

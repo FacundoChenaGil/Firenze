@@ -12,11 +12,26 @@ namespace DB
     {
         [Key]
         public int Id_Usuario_Us { get; set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Nombre_Usuario_Us { get; set; }
+
+        [Required]
+        [MaxLength(12)]
         public string Contraseña_Us { get; set; }
-        public string Nombre_Us { get; set; }
-        public string Apellido_Us { get; set; }
-        public string Telefono_Us { get; set; }
+
+        [MaxLength(20)]
+        public string? Nombre_Us { get; set; }
+
+        [MaxLength(20)]
+        public string? Apellido_Us { get; set; }
+
+        [MaxLength(20)]
+        public string? Telefono_Us { get; set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Correo_Electronico_Us { get; set; }
         public int Id_Tipo_Usuario_Us { get; set; }
         [ForeignKey("Id_Tipo_Usuario_Us")]

@@ -12,8 +12,17 @@ namespace DB
     {
         [Key]
         public int Id_Tarjeta_Trabajo_Tar { get; set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Nombre_Tar { get; set; }
+
+        [Required]
+        [MaxLength(40)]
         public string Descripcion_Tar { get; set; }
+
+        [Required]
+        [MaxLength(50)]
         public string Imagen_URL_Tar { get; set; }
         public int Id_Trabajo_Tar { get; set; }
 

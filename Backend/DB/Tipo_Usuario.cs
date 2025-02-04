@@ -11,6 +11,9 @@ namespace DB
     {
         [Key]
         public int Id_Tipo_Usuario_Tus { get; set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Descripcion_Tus { get; set; }
         public virtual ICollection<Usuario> Usuarios  { get; set; }
     }
