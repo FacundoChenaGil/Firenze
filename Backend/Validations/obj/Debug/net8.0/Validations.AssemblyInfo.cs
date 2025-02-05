@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("FirenzeAPI")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Validations")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+33fe886613df043e6d043e248b4d3182c7500910")]
-[assembly: System.Reflection.AssemblyProductAttribute("FirenzeAPI")]
-[assembly: System.Reflection.AssemblyTitleAttribute("FirenzeAPI")]
+[assembly: System.Reflection.AssemblyProductAttribute("Validations")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Validations")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
