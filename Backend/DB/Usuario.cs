@@ -18,7 +18,7 @@ namespace DB
         public string Nombre_Usuario_Us { get; set; }
 
         [Required]
-        [MaxLength(12)]
+        [MaxLength(64)]
         public string Contraseña_Us { get; set; }
 
         [MaxLength(20)]

@@ -1,0 +1,12 @@
+C:\Firenze\Backend\Result\bin\Debug\net8.0\Results.deps.json
+C:\Firenze\Backend\Result\bin\Debug\net8.0\Results.dll
+C:\Firenze\Backend\Result\bin\Debug\net8.0\Results.pdb
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Results.GeneratedMSBuildEditorConfig.editorconfig
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Results.AssemblyInfoInputs.cache
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Results.AssemblyInfo.cs
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Results.csproj.CoreCompileInputs.cache
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Results.sourcelink.json
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Results.dll
+C:\Firenze\Backend\Result\obj\Debug\net8.0\refint\Results.dll
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Results.pdb
+C:\Firenze\Backend\Result\obj\Debug\net8.0\ref\Results.dll

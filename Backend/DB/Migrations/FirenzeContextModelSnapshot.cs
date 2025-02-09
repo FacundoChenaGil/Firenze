@@ -107,6 +107,18 @@ namespace DB.Migrations
                     b.HasKey("Id_Tipo_Usuario_Tus");
 
                     b.ToTable("TiposUsuario");
+
+                    b.HasData(
+                        new
+                        {
+                            Id_Tipo_Usuario_Tus = 1,
+                            Descripcion_Tus = "Admin"
+                        },
+                        new
+                        {
+                            Id_Tipo_Usuario_Tus = 2,
+                            Descripcion_Tus = "Cliente"
+                        });
                 });
 
             modelBuilder.Entity("DB.Trabajo", b =>
@@ -208,8 +220,8 @@ namespace DB.Migrations
 
                     b.Property<string>("Contraseña_Us")
                         .IsRequired()
-                        .HasMaxLength(12)
-                        .HasColumnType("nvarchar(12)");
+                        .HasMaxLength(64)
+                        .HasColumnType("nvarchar(64)");
 
                     b.Property<string>("Correo_Electronico_Us")
                         .IsRequired()
@@ -233,6 +245,9 @@ namespace DB.Migrations
                         .HasColumnType("nvarchar(20)");
 
                     b.HasKey("Id_Usuario_Us");
+
+                    b.HasAlternateKey("Correo_Electronico_Us")
+                        .HasName("UK_Correo_Electronico_Us");
 
                     b.HasIndex("Id_Tipo_Usuario_Us");
 

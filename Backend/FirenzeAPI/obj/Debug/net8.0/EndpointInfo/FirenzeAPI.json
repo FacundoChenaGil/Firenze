@@ -4,6 +4,75 @@
     "title": "FirenzeAPI",
     "version": "1.0"
   },
-  "paths": { },
-  "components": { }
+  "paths": {
+    "/api/Usuario": {
+      "post": {
+        "tags": [
+          "Usuario"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearUsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearUsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearUsuarioDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CrearUsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "nombre_Usuario_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "contraseña_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo_Electronico_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_Tipo_Usuario_Us": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
 }

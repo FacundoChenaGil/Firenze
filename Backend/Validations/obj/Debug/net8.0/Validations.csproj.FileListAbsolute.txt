@@ -1,0 +1,16 @@
+C:\Firenze\Backend\Validations\bin\Debug\net8.0\Validations.deps.json
+C:\Firenze\Backend\Validations\bin\Debug\net8.0\Validations.dll
+C:\Firenze\Backend\Validations\bin\Debug\net8.0\Validations.pdb
+C:\Firenze\Backend\Validations\bin\Debug\net8.0\DTOs.dll
+C:\Firenze\Backend\Validations\bin\Debug\net8.0\DTOs.pdb
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.csproj.AssemblyReference.cache
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.GeneratedMSBuildEditorConfig.editorconfig
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.AssemblyInfoInputs.cache
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.AssemblyInfo.cs
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.csproj.CoreCompileInputs.cache
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.sourcelink.json
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validati.E8401245.Up2Date
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.dll
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\refint\Validations.dll
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\Validations.pdb
+C:\Firenze\Backend\Validations\obj\Debug\net8.0\ref\Validations.dll
