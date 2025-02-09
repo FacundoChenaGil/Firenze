@@ -26,7 +26,7 @@ namespace Services
             return Convert.ToBase64String(hash);
         }
 
-        public async Task<Result<Usuario>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO)
+        public async Task<Result<CrearUsuarioDTO>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO)
         {
             // Se escribe "FluentValidation.Results" para no chocar con la ambiguedad de las DataAnnotations de ASP.
 
@@ -38,7 +38,7 @@ namespace Services
                     .Select(e => new Error(e.ErrorMessage, e.PropertyName))
                     .ToList();
 
-                return Result<Usuario>.Failure(errors);
+                return Result<CrearUsuarioDTO>.Failure(errors);
             }
 
             var usuario = new Usuario
@@ -57,11 +57,11 @@ namespace Services
 
             if(rowsAffected == 0)
             {
-                return Result<Usuario>.Failure(new List<Error> { new Error("No se pudo crear el usuario", "FirenzeBD") });
+                return Result<CrearUsuarioDTO>.Failure(new List<Error> { new Error("No se pudo crear el usuario", "FirenzeBD") });
             }
 
 
-            return Result<Usuario>.Success(usuario);
+            return Result<CrearUsuarioDTO>.Success(usuarioDTO);
 
         }
     }

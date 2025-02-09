@@ -31,6 +31,11 @@ namespace DB
                 .HasAlternateKey(us => us.Correo_Electronico_Us)
                 .HasName("UK_Correo_Electronico_Us");
 
+            // Crear clave unica en la tabla usuarios en Nombre_Usuario_Us
+            modelBuilder.Entity<Usuario>()
+                .HasAlternateKey(us => us.Nombre_Usuario_Us)
+                .HasName("UK_Nombre_Usuario_Us");
+
             // Precargar Tipos de usuario en BD
             modelBuilder.Entity<Tipo_Usuario>().HasData(
                 new Tipo_Usuario { Id_Tipo_Usuario_Tus = 1, Descripcion_Tus = "Admin"},

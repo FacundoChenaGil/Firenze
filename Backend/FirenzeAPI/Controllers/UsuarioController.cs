@@ -22,7 +22,7 @@ namespace FirenzeAPI.Controllers
             var result = await _usuarioService.CrearUsuarioAsync(usuarioDTO);
 
             return result.Map<IActionResult>(
-                onSuccess: usuario => Ok(usuario),
+                onSuccess: usuarioDTO => Ok(usuarioDTO),
                 onFailure: errors => BadRequest(errors)
                 );
         }

@@ -11,7 +11,7 @@ namespace Services
 {
     public interface IUsuarioService
     {
-        public Task<Result<Usuario>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO);
+        public Task<Result<CrearUsuarioDTO>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO);
 
     }
 }
