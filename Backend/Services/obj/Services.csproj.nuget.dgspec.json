@@ -146,12 +146,12 @@
         }
       }
     },
-    "C:\\Firenze\\Backend\\Result\\Results.csproj": {
+    "C:\\Firenze\\Backend\\Result\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Firenze\\Backend\\Result\\Results.csproj",
-        "projectName": "Results",
-        "projectPath": "C:\\Firenze\\Backend\\Result\\Results.csproj",
+        "projectUniqueName": "C:\\Firenze\\Backend\\Result\\Utilities.csproj",
+        "projectName": "Utilities",
+        "projectPath": "C:\\Firenze\\Backend\\Result\\Utilities.csproj",
         "packagesPath": "C:\\Users\\facuc\\.nuget\\packages\\",
         "outputPath": "C:\\Firenze\\Backend\\Result\\obj\\",
         "projectStyle": "PackageReference",
@@ -191,6 +191,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -245,8 +251,8 @@
               "C:\\Firenze\\Backend\\DTOs\\DTOs.csproj": {
                 "projectPath": "C:\\Firenze\\Backend\\DTOs\\DTOs.csproj"
               },
-              "C:\\Firenze\\Backend\\Result\\Results.csproj": {
-                "projectPath": "C:\\Firenze\\Backend\\Result\\Results.csproj"
+              "C:\\Firenze\\Backend\\Result\\Utilities.csproj": {
+                "projectPath": "C:\\Firenze\\Backend\\Result\\Utilities.csproj"
               },
               "C:\\Firenze\\Backend\\Validations\\Validations.csproj": {
                 "projectPath": "C:\\Firenze\\Backend\\Validations\\Validations.csproj"

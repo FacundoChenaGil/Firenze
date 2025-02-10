@@ -1,6 +1,6 @@
 ﻿using DB;
 using DTOs;
-using Results;
+using Utilities;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using System.Text;
@@ -18,14 +18,6 @@ namespace Services
             _context = context;
             _crearUsuarioValidator = crearUsuarioValidator;
         }
-        private string HashPassword(string password)
-        {
-            using var sha256 = SHA256.Create();
-            var bytes = Encoding.UTF8.GetBytes(password);
-            var hash = sha256.ComputeHash(bytes);
-            return Convert.ToBase64String(hash);
-        }
-
         public async Task<Result<CrearUsuarioDTO>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO)
         {
             // Se escribe "FluentValidation.Results" para no chocar con la ambiguedad de las DataAnnotations de ASP.
@@ -44,7 +36,7 @@ namespace Services
             var usuario = new Usuario
             {
                 Nombre_Usuario_Us = usuarioDTO.Nombre_Usuario_Us,
-                Contraseña_Us = HashPassword(usuarioDTO.Contraseña_Us),
+                Contraseña_Us = Hasher.HashPassword(usuarioDTO.Contraseña_Us),
                 Nombre_Us = usuarioDTO.Nombre_Us,
                 Apellido_Us = usuarioDTO.Apellido_Us,
                 Telefono_Us = usuarioDTO.Telefono_Us,

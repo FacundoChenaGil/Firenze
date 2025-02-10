@@ -13,10 +13,10 @@ C:\Firenze\Backend\Services\obj\Debug\net8.0\ref\Services.dll
 C:\Firenze\Backend\Services\obj\Debug\net8.0\Services.csproj.AssemblyReference.cache
 C:\Firenze\Backend\Services\bin\Debug\net8.0\DB.dll
 C:\Firenze\Backend\Services\bin\Debug\net8.0\DTOs.dll
-C:\Firenze\Backend\Services\bin\Debug\net8.0\Results.dll
 C:\Firenze\Backend\Services\bin\Debug\net8.0\Validations.dll
 C:\Firenze\Backend\Services\bin\Debug\net8.0\DB.pdb
 C:\Firenze\Backend\Services\bin\Debug\net8.0\DTOs.pdb
-C:\Firenze\Backend\Services\bin\Debug\net8.0\Results.pdb
 C:\Firenze\Backend\Services\bin\Debug\net8.0\Validations.pdb
 C:\Firenze\Backend\Services\obj\Debug\net8.0\Services.csproj.Up2Date
+C:\Firenze\Backend\Services\bin\Debug\net8.0\Utilities.dll
+C:\Firenze\Backend\Services\bin\Debug\net8.0\Utilities.pdb

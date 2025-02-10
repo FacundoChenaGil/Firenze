@@ -4,10 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Results
+namespace Utilities
 {
-
-
     public class Result<T>
     {
         private Result(T value)

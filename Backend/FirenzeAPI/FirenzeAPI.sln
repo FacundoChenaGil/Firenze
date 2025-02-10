@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTOs", "..\DTOs\DTOs.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validations", "..\Validations\Validations.csproj", "{A8D4D72B-11AC-4DA3-8F64-1DA00474761F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Results", "..\Result\Results.csproj", "{F35B581B-276F-4182-A8F6-8C90A6AAD249}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "..\Result\Utilities.csproj", "{F35B581B-276F-4182-A8F6-8C90A6AAD249}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

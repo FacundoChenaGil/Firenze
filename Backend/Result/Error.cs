@@ -1,4 +1,4 @@
-﻿namespace Results
+﻿namespace Utilities
 {
     public class Error
     {

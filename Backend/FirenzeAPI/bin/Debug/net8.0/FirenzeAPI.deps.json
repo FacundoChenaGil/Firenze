@@ -11,9 +11,9 @@
           "DB": "1.0.0",
           "DTOs": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.1",
-          "Results": "1.0.0",
           "Services": "1.0.0",
           "Swashbuckle.AspNetCore": "7.2.0",
+          "Utilities": "1.0.0",
           "Validations": "1.0.0"
         },
         "runtime": {
@@ -52,6 +52,14 @@
           "lib/netstandard2.0/Azure.Identity.dll": {
             "assemblyVersion": "1.11.4.0",
             "fileVersion": "1.1100.424.31005"
+          }
+        }
+      },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
           }
         }
       },
@@ -1140,23 +1148,26 @@
           }
         }
       },
-      "Results/1.0.0": {
+      "Services/1.0.0": {
+        "dependencies": {
+          "DB": "1.0.0",
+          "DTOs": "1.0.0",
+          "Utilities": "1.0.0",
+          "Validations": "1.0.0"
+        },
         "runtime": {
-          "Results.dll": {
+          "Services.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
         }
       },
-      "Services/1.0.0": {
+      "Utilities/1.0.0": {
         "dependencies": {
-          "DB": "1.0.0",
-          "DTOs": "1.0.0",
-          "Results": "1.0.0",
-          "Validations": "1.0.0"
+          "BCrypt.Net-Next": "4.0.3"
         },
         "runtime": {
-          "Services.dll": {
+          "Utilities.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1195,6 +1206,13 @@
       "sha512": "sha512-Sf4BoE6Q3jTgFkgBkx7qztYOFELBCo+wQgpYDwal/qJ1unBH73ywPztIJKXBXORRzAeNijsuxhk94h0TIMvfYg==",
       "path": "azure.identity/1.11.4",
       "hashPath": "azure.identity.1.11.4.nupkg.sha512"
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
     "FluentValidation/11.5.1": {
       "type": "package",
@@ -1808,12 +1826,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Results/1.0.0": {
+    "Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Services/1.0.0": {
+    "Utilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

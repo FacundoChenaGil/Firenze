@@ -17,7 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\DB\DB.csproj" />
     <ProjectReference Include="..\DTOs\DTOs.csproj" />
-    <ProjectReference Include="..\Result\Results.csproj" />
+    <ProjectReference Include="..\Result\Utilities.csproj" />
     <ProjectReference Include="..\Services\Services.csproj" />
     <ProjectReference Include="..\Validations\Validations.csproj" />
   </ItemGroup>

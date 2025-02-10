@@ -10,7 +10,7 @@
         "dependencies": {
           "DB": "1.0.0",
           "DTOs": "1.0.0",
-          "Results": "1.0.0",
+          "Utilities": "1.0.0",
           "Validations": "1.0.0"
         },
         "runtime": {
@@ -668,9 +668,9 @@
           }
         }
       },
-      "Results/1.0.0": {
+      "Utilities/1.0.0": {
         "runtime": {
-          "Results.dll": {
+          "Utilities.dll": {
             "assemblyVersion": "1.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1119,7 +1119,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Results/1.0.0": {
+    "Utilities/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

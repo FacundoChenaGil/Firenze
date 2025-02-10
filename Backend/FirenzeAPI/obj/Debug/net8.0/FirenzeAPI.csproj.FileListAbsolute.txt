@@ -177,10 +177,11 @@ C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\FluentValidation.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\FluentValidation.AspNetCore.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\DTOs.dll
-C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Results.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Services.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Validations.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Services.pdb
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Validations.pdb
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\DTOs.pdb
-C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Results.pdb
+C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Utilities.dll
+C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Utilities.pdb
+C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\BCrypt.Net-Next.dll
