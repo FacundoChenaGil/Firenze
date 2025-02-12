@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 using System.Text;
 using Validations;
+using Microsoft.EntityFrameworkCore;
 
 namespace Services
 {
@@ -55,6 +56,51 @@ namespace Services
 
             return Result<CrearUsuarioDTO>.Success(usuarioDTO);
 
+        }
+
+        public async Task<Result<List<UsuarioDTO>>> GetAllUsuariosAsync()
+        {
+                var usuarios = await _context.Usuarios
+            .Select(u => new UsuarioDTO
+            {
+                Id_Usuario_Us = u.Id_Usuario_Us,
+                Nombre_Usuario_Us = u.Nombre_Usuario_Us,
+                Nombre_Us = u.Nombre_Us,
+                Apellido_Us = u.Apellido_Us,
+                Correo_Electronico_Us = u.Correo_Electronico_Us,
+                Telefono_Us = u.Telefono_Us
+            })
+            .ToListAsync();
+
+            if(usuarios == null || !usuarios.Any())
+            {
+                return Result<List<UsuarioDTO>>.Failure(new List<Error> { new Error("No se encontraron usuarios", "Usuarios") });
+            }
+          
+            return Result<List<UsuarioDTO>>.Success(usuarios);
+        }
+
+        public async Task<Result<UsuarioDTO>> GetUsuario(int idUsuario)
+        {
+            var usuario =  await _context.Usuarios
+                .Where(u => u.Id_Usuario_Us == idUsuario)
+                .Select(u => new UsuarioDTO
+                {
+                    Id_Usuario_Us = u.Id_Usuario_Us,
+                    Nombre_Usuario_Us = u.Nombre_Usuario_Us,
+                    Nombre_Us = u.Nombre_Us,
+                    Apellido_Us = u.Apellido_Us,
+                    Correo_Electronico_Us = u.Correo_Electronico_Us,
+                    Telefono_Us = u.Telefono_Us
+                })
+                .FirstOrDefaultAsync();
+
+            if(usuario == null)
+            {
+                return Result<UsuarioDTO>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "Usuarios") });
+            }
+
+            return Result<UsuarioDTO>.Success(usuario);
         }
     }
 }

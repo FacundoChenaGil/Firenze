@@ -3,24 +3,30 @@
   "WorkspaceRootPath": "C:\\Firenze\\Backend\\FirenzeAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F35B581B-276F-4182-A8F6-8C90A6AAD249}|..\\Result\\Utilities.csproj|c:\\firenze\\backend\\result\\hasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\firenzecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F35B581B-276F-4182-A8F6-8C90A6AAD249}|..\\Result\\Utilities.csproj|c:\\firenze\\backend\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6E99A-FF78-4342-A77D-1960ADE170CD}|..\\DTOs\\DTOs.csproj|c:\\firenze\\backend\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\iusuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,24 +36,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Hasher.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\Result\\Hasher.cs",
-              "RelativeDocumentMoniker": "..\\Result\\Hasher.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\Result\\Hasher.cs",
-              "RelativeToolTip": "..\\Result\\Hasher.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FirenzeContext.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\FirenzeContext.cs",
+              "RelativeDocumentMoniker": "..\\DB\\FirenzeContext.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\FirenzeContext.cs",
+              "RelativeToolTip": "..\\DB\\FirenzeContext.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAADwvyUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-10T01:40:57.367Z",
+              "WhenOpened": "2025-02-12T15:08:57.71Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "..\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T18:13:36.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Usuario.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Usuario.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Usuario.cs",
+              "RelativeToolTip": "..\\DB\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T18:04:32.063Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IUsuarioService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\IUsuarioService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\IUsuarioService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\IUsuarioService.cs",
+              "RelativeToolTip": "..\\Services\\IUsuarioService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-11T17:02:26.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -60,52 +105,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Result.cs",
               "DocumentMoniker": "C:\\Firenze\\Backend\\Result\\Result.cs",
               "RelativeDocumentMoniker": "..\\Result\\Result.cs",
               "ToolTip": "C:\\Firenze\\Backend\\Result\\Result.cs",
               "RelativeToolTip": "..\\Result\\Result.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAA+AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-10T01:38:35.302Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UsuarioController.cs",
               "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\UsuarioController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
               "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\UsuarioController.cs",
               "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwC8AAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-09T01:24:31.167Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Usuario.cs",
-              "RelativeDocumentMoniker": "..\\DB\\Usuario.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\DB\\Usuario.cs",
-              "RelativeToolTip": "..\\DB\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T02:33:41.297Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UsuarioService.cs",
               "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\UsuarioService.cs",
               "RelativeDocumentMoniker": "..\\Services\\UsuarioService.cs",
               "ToolTip": "C:\\Firenze\\Backend\\Services\\UsuarioService.cs",
               "RelativeToolTip": "..\\Services\\UsuarioService.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAYwC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAuwGUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-07T15:27:01.889Z",
               "EditorCaption": ""

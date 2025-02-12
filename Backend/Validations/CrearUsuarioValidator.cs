@@ -25,20 +25,20 @@ namespace Validations
 
             // Validaciones adicionales para los tipos de usuario 2
 
-            RuleSet("Cliente", () =>
-            {
-                RuleFor(x => x.Nombre_Us)
-                    .NotEmpty().WithMessage("El nombre es obligatorio para el cliente")
-                    .MaximumLength(20).WithMessage("El nombre no puede superar los 20 caracteres");
+            RuleFor(x => x.Nombre_Us)
+                .NotEmpty().WithMessage("El nombre es obligatorio para el cliente")
+                .MaximumLength(20).WithMessage("El nombre no puede superar los 20 caracteres")
+                .When(x => x.Id_Tipo_Usuario_Us == 2);
 
                 RuleFor(x => x.Apellido_Us)
                     .NotEmpty().WithMessage("El apellido es obligatorio para el cliente")
-                    .MaximumLength(20).WithMessage("El apellido no puede superar los 20 caracteres");
+                    .MaximumLength(20).WithMessage("El apellido no puede superar los 20 caracteres")
+                    .When(x => x.Id_Tipo_Usuario_Us == 2);
 
-                RuleFor(x => x.Telefono_Us)
+            RuleFor(x => x.Telefono_Us)
                     .NotEmpty().WithMessage("El teléfono es obligatorio para el cliente")
-                    .MaximumLength(20).WithMessage("El teléfono no puede superar los 20 caracteres");
-            });
+                    .MaximumLength(20).WithMessage("El teléfono no puede superar los 20 caracteres")
+                    .When(x => x.Id_Tipo_Usuario_Us == 2);
         }
     }
 }

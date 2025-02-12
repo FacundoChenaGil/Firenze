@@ -14,5 +14,31 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.UsuarioController",
+    "Method": "GetAllUsuarios",
+    "RelativePath": "api/Usuario",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.UsuarioController",
+    "Method": "GetUsuarioById",
+    "RelativePath": "api/Usuario/{idUsuario}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

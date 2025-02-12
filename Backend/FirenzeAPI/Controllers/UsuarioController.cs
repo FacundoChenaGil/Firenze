@@ -26,5 +26,28 @@ namespace FirenzeAPI.Controllers
                 onFailure: errors => BadRequest(errors)
                 );
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllUsuarios()
+        {
+            var result = await _usuarioService.GetAllUsuariosAsync();
+
+            return result.Map<IActionResult>(
+                onSuccess: listDto => Ok(listDto),
+                onFailure: errors => BadRequest(errors)
+                );
+        }
+
+        [HttpGet("{idUsuario:int}")]
+        public async Task<IActionResult> GetUsuarioById(int idUsuario)
+        {
+            var result = await _usuarioService.GetUsuario(idUsuario);
+
+            return result.Map<IActionResult>(
+                onSuccess: usuario => Ok(usuario),
+                onFailure: errors => NotFound(errors)
+                );
+        }
+
     }
 }
