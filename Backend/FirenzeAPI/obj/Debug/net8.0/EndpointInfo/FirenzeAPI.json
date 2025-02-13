@@ -67,11 +67,89 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Usuario"
+        ],
+        "parameters": [
+          {
+            "name": "idUsuario",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     }
   },
   "components": {
     "schemas": {
+      "ActualizarUsuarioDTO": {
+        "type": "object",
+        "properties": {
+          "id_Usuario_Us": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre_Usuario_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "contraseña_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombre_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "apellido_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "correo_Electronico_Us": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_Tipo_Usuario_Us": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "CrearUsuarioDTO": {
         "type": "object",
         "properties": {

@@ -6,6 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using Validations;
 using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 
 namespace Services
 {
@@ -13,11 +14,13 @@ namespace Services
     {
         private readonly FirenzeContext _context;
         private readonly CrearUsuarioValidator _crearUsuarioValidator;
+        private readonly ActualizarUsuarioValidator _actualizarUsuarioValidator;
 
-        public UsuarioService(FirenzeContext context, CrearUsuarioValidator crearUsuarioValidator)
+        public UsuarioService(FirenzeContext context, CrearUsuarioValidator crearUsuarioValidator, ActualizarUsuarioValidator actualizarUsuarioValidator)
         {
             _context = context;
             _crearUsuarioValidator = crearUsuarioValidator;
+            _actualizarUsuarioValidator = actualizarUsuarioValidator;
         }
         public async Task<Result<CrearUsuarioDTO>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO)
         {
@@ -50,7 +53,7 @@ namespace Services
 
             if(rowsAffected == 0)
             {
-                return Result<CrearUsuarioDTO>.Failure(new List<Error> { new Error("No se pudo crear el usuario", "FirenzeBD") });
+                return Result<CrearUsuarioDTO>.Failure(new List<Error> { new Error("No se pudo crear el usuario", "CrearUsuarioAsync") });
             }
 
 
@@ -74,13 +77,13 @@ namespace Services
 
             if(usuarios == null || !usuarios.Any())
             {
-                return Result<List<UsuarioDTO>>.Failure(new List<Error> { new Error("No se encontraron usuarios", "Usuarios") });
+                return Result<List<UsuarioDTO>>.Failure(new List<Error> { new Error("No se encontraron usuarios", "GetAllUsuariosAsync") });
             }
           
             return Result<List<UsuarioDTO>>.Success(usuarios);
         }
 
-        public async Task<Result<UsuarioDTO>> GetUsuario(int idUsuario)
+        public async Task<Result<UsuarioDTO>> GetUsuarioAsync(int idUsuario)
         {
             var usuario =  await _context.Usuarios
                 .Where(u => u.Id_Usuario_Us == idUsuario)
@@ -97,10 +100,63 @@ namespace Services
 
             if(usuario == null)
             {
-                return Result<UsuarioDTO>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "Usuarios") });
+                return Result<UsuarioDTO>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "GetUsuarioAsync") });
             }
 
             return Result<UsuarioDTO>.Success(usuario);
         }
+
+        public async Task<bool> ExisteUsuarioAsync(int idUsuario)
+        {
+            return await _context.Usuarios.AnyAsync(u => u.Id_Usuario_Us == idUsuario); 
+        }
+
+
+        public async Task<Result<bool>> ActualizarUsuarioAsync(int idUsuario, ActualizarUsuarioDTO actualizarUsuarioDTO)
+        {
+            bool Isusuario = await ExisteUsuarioAsync(idUsuario);
+
+            if(!Isusuario)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "ActualizarUsuarioAsync") });
+            }
+
+            var usuarioActualizado = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id_Usuario_Us == idUsuario);
+
+            FluentValidation.Results.ValidationResult result = await _actualizarUsuarioValidator.ValidateAsync(actualizarUsuarioDTO);
+
+            if (!result.IsValid)
+            {
+                var errors = result.Errors
+                    .Select(e => new Error(e.ErrorMessage, e.PropertyName))
+                    .ToList();
+
+                return Result<bool>.Failure(errors);
+            }
+
+            usuarioActualizado.Nombre_Usuario_Us = actualizarUsuarioDTO.Nombre_Usuario_Us;
+            usuarioActualizado.Contraseña_Us = actualizarUsuarioDTO.Contraseña_Us;
+            usuarioActualizado.Nombre_Us = actualizarUsuarioDTO.Nombre_Us;
+            usuarioActualizado.Apellido_Us = actualizarUsuarioDTO.Apellido_Us;
+            usuarioActualizado.Telefono_Us = actualizarUsuarioDTO.Telefono_Us;
+            usuarioActualizado.Correo_Electronico_Us = actualizarUsuarioDTO.Correo_Electronico_Us;
+
+            await _context.SaveChangesAsync();
+
+            return Result<bool>.Success(true);
+        }
+
+        public async Task<Result<bool>> EliminarUsuarioAsync(int idUsuario)
+        {
+            var fila = await _context.Usuarios.Where(u => u.Id_Usuario_Us == idUsuario).ExecuteDeleteAsync();
+
+            if(fila == 0)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "EliminarUsuarioAsync") });
+            }
+
+            return Result<bool>.Success(true);
+        }
+
     }
 }

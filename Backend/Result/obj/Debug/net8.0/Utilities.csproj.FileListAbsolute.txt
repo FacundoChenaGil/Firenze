@@ -1,6 +1,7 @@
 C:\Firenze\Backend\Result\bin\Debug\net8.0\Utilities.deps.json
 C:\Firenze\Backend\Result\bin\Debug\net8.0\Utilities.dll
 C:\Firenze\Backend\Result\bin\Debug\net8.0\Utilities.pdb
+C:\Firenze\Backend\Result\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache
 C:\Firenze\Backend\Result\obj\Debug\net8.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
 C:\Firenze\Backend\Result\obj\Debug\net8.0\Utilities.AssemblyInfoInputs.cache
 C:\Firenze\Backend\Result\obj\Debug\net8.0\Utilities.AssemblyInfo.cs
@@ -10,4 +11,3 @@ C:\Firenze\Backend\Result\obj\Debug\net8.0\Utilities.dll
 C:\Firenze\Backend\Result\obj\Debug\net8.0\refint\Utilities.dll
 C:\Firenze\Backend\Result\obj\Debug\net8.0\Utilities.pdb
 C:\Firenze\Backend\Result\obj\Debug\net8.0\ref\Utilities.dll
-C:\Firenze\Backend\Result\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache

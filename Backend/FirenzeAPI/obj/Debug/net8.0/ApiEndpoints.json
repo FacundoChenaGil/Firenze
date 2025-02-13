@@ -40,5 +40,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.UsuarioController",
+    "Method": "ActualizarUsuario",
+    "RelativePath": "api/Usuario/{idUsuario}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idUsuario",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "actualizarUsuarioDTO",
+        "Type": "DTOs.ActualizarUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

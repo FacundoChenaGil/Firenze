@@ -41,7 +41,7 @@ namespace FirenzeAPI.Controllers
         [HttpGet("{idUsuario:int}")]
         public async Task<IActionResult> GetUsuarioById(int idUsuario)
         {
-            var result = await _usuarioService.GetUsuario(idUsuario);
+            var result = await _usuarioService.GetUsuarioAsync(idUsuario);
 
             return result.Map<IActionResult>(
                 onSuccess: usuario => Ok(usuario),
@@ -49,5 +49,26 @@ namespace FirenzeAPI.Controllers
                 );
         }
 
+        [HttpPut("{idUsuario:int}")]
+        public async Task<IActionResult> ActualizarUsuario(int idUsuario, ActualizarUsuarioDTO actualizarUsuarioDTO)
+        {
+            var result = await _usuarioService.ActualizarUsuarioAsync(idUsuario, actualizarUsuarioDTO);
+
+            return result.Map<IActionResult>(
+                onSuccess: ok => Ok(),
+                onFailure: errors => BadRequest(errors)
+                );
+        }
+
+        [HttpDelete("{idUsuario:int}")]
+        public async Task<IActionResult> EliminarUsuario(int idUsuario)
+        {
+            var result = await _usuarioService.EliminarUsuarioAsync(idUsuario);
+
+            return result.Map<IActionResult>(
+                onSuccess: ok => Ok("Se elimino el Usuario con exito."),
+                onFailure: errors => NotFound(errors)
+                );
+        }
     }
 }
