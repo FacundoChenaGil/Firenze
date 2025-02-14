@@ -22,6 +22,15 @@ namespace Services
             _crearUsuarioValidator = crearUsuarioValidator;
             _actualizarUsuarioValidator = actualizarUsuarioValidator;
         }
+        private async Task<bool> ExisteCorreoAsync(int? idUsuario, string correoElectronico)
+        {
+           return await _context.Usuarios.AnyAsync(u => (u.Id_Usuario_Us != idUsuario || !idUsuario.HasValue) && u.Correo_Electronico_Us == correoElectronico);
+        }
+
+        private async Task<bool> ExisteNombreUsuarioAsync(int? idUsuario, string nombreUsuario)
+        {
+            return await _context.Usuarios.AnyAsync(u => (u.Id_Usuario_Us != idUsuario || !idUsuario.HasValue) && u.Nombre_Usuario_Us == nombreUsuario);
+        }
         public async Task<Result<CrearUsuarioDTO>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO)
         {
             // Se escribe "FluentValidation.Results" para no chocar con la ambiguedad de las DataAnnotations de ASP.
@@ -35,6 +44,16 @@ namespace Services
                     .ToList();
 
                 return Result<CrearUsuarioDTO>.Failure(errors);
+            }
+
+            if(await ExisteNombreUsuarioAsync(null, usuarioDTO.Nombre_Usuario_Us))
+            {
+                return Result<CrearUsuarioDTO>.Failure(new List<Error> { new Error("El usuario ingresado ya existe.", "CrearUsuarioAsync") });
+            }
+
+            if (await ExisteCorreoAsync(null, usuarioDTO.Correo_Electronico_Us))
+            {
+                return Result<CrearUsuarioDTO>.Failure(new List<Error> { new Error("El correo electronico ingresado ya se registro.", "CrearUsuarioAsync") });
             }
 
             var usuario = new Usuario
@@ -106,22 +125,14 @@ namespace Services
             return Result<UsuarioDTO>.Success(usuario);
         }
 
-        public async Task<bool> ExisteUsuarioAsync(int idUsuario)
-        {
-            return await _context.Usuarios.AnyAsync(u => u.Id_Usuario_Us == idUsuario); 
-        }
-
-
         public async Task<Result<bool>> ActualizarUsuarioAsync(int idUsuario, ActualizarUsuarioDTO actualizarUsuarioDTO)
         {
-            bool Isusuario = await ExisteUsuarioAsync(idUsuario);
-
-            if(!Isusuario)
-            {
-                return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "ActualizarUsuarioAsync") });
-            }
-
             var usuarioActualizado = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id_Usuario_Us == idUsuario);
+
+            if(usuarioActualizado == null)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "EliminarUsuarioAsync") });
+            }
 
             FluentValidation.Results.ValidationResult result = await _actualizarUsuarioValidator.ValidateAsync(actualizarUsuarioDTO);
 
@@ -134,8 +145,22 @@ namespace Services
                 return Result<bool>.Failure(errors);
             }
 
+            if (await ExisteNombreUsuarioAsync(actualizarUsuarioDTO.Id_Usuario_Us ,actualizarUsuarioDTO.Nombre_Usuario_Us))
+            {
+                return Result<bool>.Failure(new List<Error> { new Error("El usuario ingresado ya existe.", "ActualizarUsuarioAsync") });
+            }
+
+            if (await ExisteCorreoAsync(actualizarUsuarioDTO.Id_Usuario_Us ,actualizarUsuarioDTO.Correo_Electronico_Us))
+            {
+                return Result<bool>.Failure(new List<Error> { new Error("El correo electronico ingresado ya se registro.", "ActualizarUsuarioAsync") });
+            }
+
+            if (!string.IsNullOrWhiteSpace(actualizarUsuarioDTO.Contraseña_Us))
+            {
+                usuarioActualizado.Contraseña_Us = Hasher.HashPassword(actualizarUsuarioDTO.Contraseña_Us);
+            }
+
             usuarioActualizado.Nombre_Usuario_Us = actualizarUsuarioDTO.Nombre_Usuario_Us;
-            usuarioActualizado.Contraseña_Us = actualizarUsuarioDTO.Contraseña_Us;
             usuarioActualizado.Nombre_Us = actualizarUsuarioDTO.Nombre_Us;
             usuarioActualizado.Apellido_Us = actualizarUsuarioDTO.Apellido_Us;
             usuarioActualizado.Telefono_Us = actualizarUsuarioDTO.Telefono_Us;
