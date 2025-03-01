@@ -38,7 +38,8 @@ namespace Services
         {
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, usuario.Nombre_Us!)
+                new Claim(ClaimTypes.Name, usuario.Nombre_Usuario_Us!),
+                new Claim(ClaimTypes.Role, usuario.Id_Tipo_Usuario_Us.ToString())
             };
 
             var key = new SymmetricSecurityKey(

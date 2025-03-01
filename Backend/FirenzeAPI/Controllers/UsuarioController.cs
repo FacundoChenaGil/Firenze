@@ -1,4 +1,5 @@
 ﻿using DTOs;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services;
@@ -27,6 +28,7 @@ namespace FirenzeAPI.Controllers
                 );
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet]
         public async Task<IActionResult> GetAllUsuarios()
         {

@@ -1,8 +1,11 @@
 using DB;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Services;
+using System.Text;
 using Validations;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +27,22 @@ builder.Services.AddDbContext<FirenzeContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("FirenzeConnection"));
 });
+
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["AppSettings:Issuer"],
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["AppSettings:Audience"],
+            ValidateLifetime = true,
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(builder.Configuration["Appsettings:Token"]!)),
+            ValidateIssuerSigningKey = true
+        };
+    });
 
 var app = builder.Build();
 
