@@ -1,5 +1,37 @@
 [
   {
+    "ContainingType": "FirenzeAPI.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDTO",
+        "Type": "DTOs.LoginDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.AuthController",
+    "Method": "Registrar",
+    "RelativePath": "api/Auth/registrar",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioDTO",
+        "Type": "DTOs.CrearUsuarioDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirenzeAPI.Controllers.UsuarioController",
     "Method": "CrearUsuario",
     "RelativePath": "api/Usuario",

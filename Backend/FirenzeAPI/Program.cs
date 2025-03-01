@@ -18,6 +18,7 @@ builder.Services.AddValidatorsFromAssemblyContaining<CrearUsuarioValidator>();
 builder.Services.AddFluentValidationAutoValidation();
 
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
+builder.Services.AddScoped<IAuthService, AuthService>();
 
 builder.Services.AddDbContext<FirenzeContext>(options =>
 {

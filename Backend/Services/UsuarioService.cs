@@ -7,6 +7,7 @@ using System.Text;
 using Validations;
 using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
+using System.Globalization;
 
 namespace Services
 {
@@ -22,15 +23,25 @@ namespace Services
             _crearUsuarioValidator = crearUsuarioValidator;
             _actualizarUsuarioValidator = actualizarUsuarioValidator;
         }
-        private async Task<bool> ExisteCorreoAsync(int? idUsuario, string correoElectronico)
+        private async Task<bool> ExisteCorreoAsync(int idUsuario, string correoElectronico)
         {
-           return await _context.Usuarios.AnyAsync(u => (u.Id_Usuario_Us != idUsuario || !idUsuario.HasValue) && u.Correo_Electronico_Us == correoElectronico);
+           return await _context.Usuarios.AnyAsync(u => u.Id_Usuario_Us != idUsuario && u.Correo_Electronico_Us == correoElectronico);
         }
 
-        private async Task<bool> ExisteNombreUsuarioAsync(int? idUsuario, string nombreUsuario)
+        private async Task<bool> ExisteCorreoAsync(string correoElectronico)
         {
-            return await _context.Usuarios.AnyAsync(u => (u.Id_Usuario_Us != idUsuario || !idUsuario.HasValue) && u.Nombre_Usuario_Us == nombreUsuario);
+            return await _context.Usuarios.AnyAsync(u => u.Correo_Electronico_Us == correoElectronico);
         }
+
+        private async Task<bool> ExisteNombreUsuarioAsync(int idUsuario, string nombreUsuario)
+        {
+            return await _context.Usuarios.AnyAsync(u => u.Id_Usuario_Us != idUsuario && u.Nombre_Usuario_Us == nombreUsuario);
+        }
+        private async Task<bool> ExisteNombreUsuarioAsync(string nombreUsuario)
+        {
+            return await _context.Usuarios.AnyAsync(u => u.Nombre_Usuario_Us == nombreUsuario);
+        }
+
         public async Task<Result<CrearUsuarioDTO>> CrearUsuarioAsync(CrearUsuarioDTO usuarioDTO)
         {
             // Se escribe "FluentValidation.Results" para no chocar con la ambiguedad de las DataAnnotations de ASP.
@@ -46,12 +57,12 @@ namespace Services
                 return Result<CrearUsuarioDTO>.Failure(errors);
             }
 
-            if(await ExisteNombreUsuarioAsync(null, usuarioDTO.Nombre_Usuario_Us))
+            if(await ExisteNombreUsuarioAsync(usuarioDTO.Nombre_Usuario_Us))
             {
                 return Result<CrearUsuarioDTO>.Failure(new List<Error> { new Error("El usuario ingresado ya existe.", "CrearUsuarioAsync") });
             }
 
-            if (await ExisteCorreoAsync(null, usuarioDTO.Correo_Electronico_Us))
+            if (await ExisteCorreoAsync(usuarioDTO.Correo_Electronico_Us))
             {
                 return Result<CrearUsuarioDTO>.Failure(new List<Error> { new Error("El correo electronico ingresado ya se registro.", "CrearUsuarioAsync") });
             }
@@ -125,6 +136,26 @@ namespace Services
             return Result<UsuarioDTO>.Success(usuario);
         }
 
+        public async Task<Usuario> GetUsuarioAsync(string nombreUsuario)
+        {
+            var usuario = await _context.Usuarios
+                .Where(u => u.Nombre_Usuario_Us == nombreUsuario)
+                .Select(u => new Usuario
+                {
+                    Id_Usuario_Us = u.Id_Usuario_Us,
+                    Nombre_Usuario_Us = u.Nombre_Usuario_Us,
+                    Contraseña_Us = u.Contraseña_Us,
+                    Nombre_Us = u.Nombre_Us,
+                    Apellido_Us = u.Apellido_Us,
+                    Correo_Electronico_Us = u.Correo_Electronico_Us,
+                    Telefono_Us = u.Telefono_Us,
+                    Id_Tipo_Usuario_Us = u.Id_Tipo_Usuario_Us
+                })
+                .FirstOrDefaultAsync();
+
+            return usuario!;
+        }
+
         public async Task<Result<bool>> ActualizarUsuarioAsync(int idUsuario, ActualizarUsuarioDTO actualizarUsuarioDTO)
         {
             var usuarioActualizado = await _context.Usuarios.FirstOrDefaultAsync(u => u.Id_Usuario_Us == idUsuario);
@@ -175,7 +206,7 @@ namespace Services
         {
             var fila = await _context.Usuarios.Where(u => u.Id_Usuario_Us == idUsuario).ExecuteDeleteAsync();
 
-            if(fila == 0)
+            if (fila == 0)
             {
                 return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el usuario con ID: {idUsuario}.", "EliminarUsuarioAsync") });
             }
