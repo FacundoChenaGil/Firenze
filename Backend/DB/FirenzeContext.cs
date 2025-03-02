@@ -41,6 +41,21 @@ namespace DB
                 new Tipo_Usuario { Id_Tipo_Usuario_Tus = 1, Descripcion_Tus = "Admin"},
                 new Tipo_Usuario { Id_Tipo_Usuario_Tus = 2, Descripcion_Tus = "Cliente"}
              );
+
+            // Precargar Tipos de trabajo en BD
+            modelBuilder.Entity<Tipo_Trabajo>().HasData(
+                new Tipo_Trabajo { Id_Tipo_Trabajo_Ttr = 1, Descripcion_Ttr = "Pedicuría"},
+                new Tipo_Trabajo { Id_Tipo_Trabajo_Ttr = 2, Descripcion_Ttr = "Manicuría"}
+                );
+
+            // Precargar Estados Turno en BD
+            modelBuilder.Entity<Estado_Turno>().HasData(
+                new Estado_Turno { Id_Estado_Turno_Et = 1, Descripcion_Et = "Ausente" },
+                new Estado_Turno { Id_Estado_Turno_Et = 2, Descripcion_Et = "Cancelado"},
+                new Estado_Turno { Id_Estado_Turno_Et = 3, Descripcion_Et = "Pendiente de Pago"},
+                new Estado_Turno { Id_Estado_Turno_Et = 4, Descripcion_Et = "Solicitado"},
+                new Estado_Turno { Id_Estado_Turno_Et = 5, Descripcion_Et = "Finalizado"}
+                );
            
             base.OnModelCreating(modelBuilder);
         }
