@@ -14,7 +14,6 @@ namespace DTOs
         public string? Nombre_Us { get; set; }
         public string? Apellido_Us { get; set; }
         public string? Telefono_Us { get; set; }
-        public string Correo_Electronico_Us { get; set; }
         public int Id_Tipo_Usuario_Us { get; set; }
     }
 }

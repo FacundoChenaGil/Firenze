@@ -23,10 +23,6 @@ namespace Services
             _crearUsuarioValidator = crearUsuarioValidator;
             _actualizarUsuarioValidator = actualizarUsuarioValidator;
         }
-        private async Task<bool> ExisteCorreoAsync(int idUsuario, string correoElectronico)
-        {
-           return await _context.Usuarios.AnyAsync(u => u.Id_Usuario_Us != idUsuario && u.Correo_Electronico_Us == correoElectronico);
-        }
 
         private async Task<bool> ExisteCorreoAsync(string correoElectronico)
         {
@@ -181,11 +177,6 @@ namespace Services
                 return Result<bool>.Failure(new List<Error> { new Error("El usuario ingresado ya existe.", "ActualizarUsuarioAsync") });
             }
 
-            if (await ExisteCorreoAsync(actualizarUsuarioDTO.Id_Usuario_Us ,actualizarUsuarioDTO.Correo_Electronico_Us))
-            {
-                return Result<bool>.Failure(new List<Error> { new Error("El correo electronico ingresado ya se registro.", "ActualizarUsuarioAsync") });
-            }
-
             if (!string.IsNullOrWhiteSpace(actualizarUsuarioDTO.Contraseña_Us))
             {
                 usuarioActualizado.Contraseña_Us = Hasher.HashPassword(actualizarUsuarioDTO.Contraseña_Us);
@@ -195,7 +186,6 @@ namespace Services
             usuarioActualizado.Nombre_Us = actualizarUsuarioDTO.Nombre_Us;
             usuarioActualizado.Apellido_Us = actualizarUsuarioDTO.Apellido_Us;
             usuarioActualizado.Telefono_Us = actualizarUsuarioDTO.Telefono_Us;
-            usuarioActualizado.Correo_Electronico_Us = actualizarUsuarioDTO.Correo_Electronico_Us;
 
             await _context.SaveChangesAsync();
 

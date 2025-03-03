@@ -222,10 +222,6 @@
             "type": "string",
             "nullable": true
           },
-          "correo_Electronico_Us": {
-            "type": "string",
-            "nullable": true
-          },
           "id_Tipo_Usuario_Us": {
             "type": "integer",
             "format": "int32"

@@ -23,11 +23,6 @@ namespace Validations
                 .MaximumLength(12).WithMessage("La contraseña no puede superar los 12 caracteres")
                 .MinimumLength(8).WithMessage("La contraseña no puede ser menor que 8 caracteres");
 
-            RuleFor(x => x.Correo_Electronico_Us)
-                .NotEmpty().WithMessage("El email es obligatorio")
-                .MaximumLength(20).WithMessage("El email no puede superar los 20 caracteres")
-                .EmailAddress().WithMessage("Debe ser un email válido");
-
             // Validaciones adicionales para los tipos de usuario 2
 
             RuleFor(x => x.Nombre_Us)
