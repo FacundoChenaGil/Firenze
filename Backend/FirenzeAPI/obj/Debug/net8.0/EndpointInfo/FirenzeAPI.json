@@ -198,10 +198,6 @@
       "ActualizarUsuarioDTO": {
         "type": "object",
         "properties": {
-          "id_Usuario_Us": {
-            "type": "integer",
-            "format": "int32"
-          },
           "nombre_Usuario_Us": {
             "type": "string",
             "nullable": true

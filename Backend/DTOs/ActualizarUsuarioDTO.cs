@@ -8,7 +8,6 @@ namespace DTOs
 {
     public class ActualizarUsuarioDTO
     {
-        public int Id_Usuario_Us {  get; set; }
         public string Nombre_Usuario_Us { get; set; }
         public string Contraseña_Us { get; set; }
         public string? Nombre_Us { get; set; }

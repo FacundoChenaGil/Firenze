@@ -13,6 +13,8 @@ namespace Services
         public Task<Result<CrearTrabajoDTO>> CrearTrabajoAsync(CrearTrabajoDTO trabajoDTO);
         public Task<Result<List<TrabajoDTO>>> GetAllTrabajosAsync();
         public Task<Result<TrabajoDTO>> GetTrabajoAsync(int idTrabajo);
+        public Task<Result<bool>> ActualizarTrabajoAsync(int idTrabajo, ActualizarTrabajoDTO trabajoDTO);
+        public Task<Result<bool>> EliminarTrabajoAsync(int idTrabajo);
 
     }
 }

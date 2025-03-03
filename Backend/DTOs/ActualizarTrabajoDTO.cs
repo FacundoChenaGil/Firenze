@@ -8,7 +8,6 @@ namespace DTOs
 {
     public class ActualizarTrabajoDTO
     {
-        public int Id_Trabajo_Tr {  get; set; }
         public string Descripcion_Tr { get; set; }
         public decimal Precio_Tr { get; set; }
         public TimeSpan? Duracion_Tr { get; set; }

@@ -17,11 +17,13 @@ namespace Services
 
         private readonly FirenzeContext _context;
         private readonly CrearTrabajoValidator _crearTrabajoValidator;
+        private readonly ActualizarTrabajoValidator _actualizarTrabajoValidator;
 
-        public TrabajoService(FirenzeContext context, CrearTrabajoValidator crearTrabajoValidator)
+        public TrabajoService(FirenzeContext context, CrearTrabajoValidator crearTrabajoValidator, ActualizarTrabajoValidator actualizarTrabajoValidator)
         {
             _context = context;
             _crearTrabajoValidator = crearTrabajoValidator;
+            _actualizarTrabajoValidator = actualizarTrabajoValidator;
         }
 
         public async Task<Result<CrearTrabajoDTO>> CrearTrabajoAsync(CrearTrabajoDTO trabajoDTO)
@@ -102,5 +104,48 @@ namespace Services
 
             return Result<TrabajoDTO>.Success(trabajo);
         }
-    }
+
+        public async Task<Result<bool>> ActualizarTrabajoAsync(int idTrabajo, ActualizarTrabajoDTO trabajoDTO)
+        {
+            var trabajoActualizado = await _context.Trabajos.FirstOrDefaultAsync(t => t.Id_Trabajo_Tr == idTrabajo);
+
+            if(trabajoActualizado == null)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el trabajo con id: {idTrabajo}.", "ActualizarTrabajoAsync") });
+            }
+
+            FluentValidation.Results.ValidationResult result = await _actualizarTrabajoValidator.ValidateAsync(trabajoDTO);
+
+            if(!result.IsValid)
+            {
+                var errors = result.Errors
+                    .Select(e => new Error(e.ErrorMessage, e.PropertyName))
+                    .ToList();
+
+                return Result<bool>.Failure(errors);
+            }
+
+            trabajoActualizado.Descripcion_Tr = trabajoDTO.Descripcion_Tr;
+            trabajoActualizado.Precio_Tr = trabajoDTO.Precio_Tr;
+            trabajoActualizado.Duracion_Tr = trabajoDTO.Duracion_Tr;
+            trabajoActualizado.Adicional_Tr = trabajoDTO.Adicional_Tr;
+            trabajoActualizado.Id_Tipo_Trabajo_Tr = trabajoDTO.Id_Tipo_Trabajo_Tr;
+
+            await _context.SaveChangesAsync();
+
+            return Result<bool>.Success(true);
+        }
+
+        public async Task<Result<bool>> EliminarTrabajoAsync(int idTrabajo)
+        {
+            var fila = await _context.Trabajos.Where(t => t.Id_Trabajo_Tr == idTrabajo).ExecuteDeleteAsync();
+
+            if(fila == 0)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error($"No se pudo eliminar el trabajo con id: {idTrabajo}.", "EliminarTrabajoAsync") });
+            }
+
+            return Result<bool>.Success(true);
+        }
+    } 
 }

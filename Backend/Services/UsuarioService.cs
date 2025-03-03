@@ -172,7 +172,7 @@ namespace Services
                 return Result<bool>.Failure(errors);
             }
 
-            if (await ExisteNombreUsuarioAsync(actualizarUsuarioDTO.Id_Usuario_Us ,actualizarUsuarioDTO.Nombre_Usuario_Us))
+            if (await ExisteNombreUsuarioAsync(idUsuario ,actualizarUsuarioDTO.Nombre_Usuario_Us))
             {
                 return Result<bool>.Failure(new List<Error> { new Error("El usuario ingresado ya existe.", "ActualizarUsuarioAsync") });
             }

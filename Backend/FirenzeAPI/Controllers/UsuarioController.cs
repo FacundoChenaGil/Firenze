@@ -28,7 +28,7 @@ namespace FirenzeAPI.Controllers
                 );
         }
 
-        [Authorize(Roles = "1")]
+        //[Authorize(Roles = "1")]
         [HttpGet]
         public async Task<IActionResult> GetAllUsuarios()
         {
