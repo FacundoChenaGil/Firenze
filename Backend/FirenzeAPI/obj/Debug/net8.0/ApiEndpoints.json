@@ -32,6 +32,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FirenzeAPI.Controllers.TrabajoController",
+    "Method": "CrearTrabajo",
+    "RelativePath": "api/Trabajo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "trabajoDTO",
+        "Type": "DTOs.CrearTrabajoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TrabajoController",
+    "Method": "GetAllTrabajos",
+    "RelativePath": "api/Trabajo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TrabajoController",
+    "Method": "GetTrabajo",
+    "RelativePath": "api/Trabajo/{idTrabajo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTrabajo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TrabajoController",
+    "Method": "ActualizarTrabajo",
+    "RelativePath": "api/Trabajo/{idTrabajo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTrabajo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "trabajoDTO",
+        "Type": "DTOs.ActualizarTrabajoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TrabajoController",
+    "Method": "EliminarTrabajo",
+    "RelativePath": "api/Trabajo/{idTrabajo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTrabajo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirenzeAPI.Controllers.UsuarioController",
     "Method": "CrearUsuario",
     "RelativePath": "api/Usuario",

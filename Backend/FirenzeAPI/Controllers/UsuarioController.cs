@@ -57,7 +57,7 @@ namespace FirenzeAPI.Controllers
             var result = await _usuarioService.ActualizarUsuarioAsync(idUsuario, actualizarUsuarioDTO);
 
             return result.Map<IActionResult>(
-                onSuccess: ok => Ok(),
+                onSuccess: ok => Ok(ok),
                 onFailure: errors => BadRequest(errors)
                 );
         }

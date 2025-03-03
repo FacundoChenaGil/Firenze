@@ -67,6 +67,131 @@
         }
       }
     },
+    "/api/Trabajo": {
+      "post": {
+        "tags": [
+          "Trabajo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearTrabajoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearTrabajoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearTrabajoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Trabajo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Trabajo/{idTrabajo}": {
+      "get": {
+        "tags": [
+          "Trabajo"
+        ],
+        "parameters": [
+          {
+            "name": "idTrabajo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Trabajo"
+        ],
+        "parameters": [
+          {
+            "name": "idTrabajo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTrabajoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTrabajoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTrabajoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Trabajo"
+        ],
+        "parameters": [
+          {
+            "name": "idTrabajo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Usuario": {
       "post": {
         "tags": [
@@ -195,6 +320,32 @@
   },
   "components": {
     "schemas": {
+      "ActualizarTrabajoDTO": {
+        "type": "object",
+        "properties": {
+          "descripcion_Tr": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio_Tr": {
+            "type": "number",
+            "format": "double"
+          },
+          "duracion_Tr": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "adicional_Tr": {
+            "type": "boolean"
+          },
+          "id_Tipo_Trabajo_Tr": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ActualizarUsuarioDTO": {
         "type": "object",
         "properties": {
@@ -219,6 +370,32 @@
             "nullable": true
           },
           "id_Tipo_Usuario_Us": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearTrabajoDTO": {
+        "type": "object",
+        "properties": {
+          "descripcion_Tr": {
+            "type": "string",
+            "nullable": true
+          },
+          "precio_Tr": {
+            "type": "number",
+            "format": "double"
+          },
+          "duracion_Tr": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "adicional_Tr": {
+            "type": "boolean"
+          },
+          "id_Tipo_Trabajo_Tr": {
             "type": "integer",
             "format": "int32"
           }

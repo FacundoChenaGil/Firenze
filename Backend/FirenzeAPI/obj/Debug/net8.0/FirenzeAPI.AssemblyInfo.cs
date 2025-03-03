@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FirenzeAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84d6873788a77c9a2f784880287ea02499ba6cf2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+231466201638d36904521cfd46cdf5ed0c7ba5c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("FirenzeAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FirenzeAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
