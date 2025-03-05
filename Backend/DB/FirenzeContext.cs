@@ -45,7 +45,8 @@ namespace DB
             // Precargar Tipos de trabajo en BD
             modelBuilder.Entity<Tipo_Trabajo>().HasData(
                 new Tipo_Trabajo { Id_Tipo_Trabajo_Ttr = 1, Descripcion_Ttr = "Pedicuría"},
-                new Tipo_Trabajo { Id_Tipo_Trabajo_Ttr = 2, Descripcion_Ttr = "Manicuría"}
+                new Tipo_Trabajo { Id_Tipo_Trabajo_Ttr = 2, Descripcion_Ttr = "Manicuría"},
+                new Tipo_Trabajo { Id_Tipo_Trabajo_Ttr = 3, Descripcion_Ttr = "Adicional"}
                 );
 
             // Precargar Estados Turno en BD

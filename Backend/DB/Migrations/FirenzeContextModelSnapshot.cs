@@ -127,6 +127,11 @@ namespace DB.Migrations
                         {
                             Id_Tipo_Trabajo_Ttr = 2,
                             Descripcion_Ttr = "Manicuría"
+                        },
+                        new
+                        {
+                            Id_Tipo_Trabajo_Ttr = 3,
+                            Descripcion_Ttr = "Adicional"
                         });
                 });
 

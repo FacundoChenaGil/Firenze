@@ -3,15 +3,25 @@
   "WorkspaceRootPath": "C:\\Firenze\\Backend\\FirenzeAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\trabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\trabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Firenze\\Backend\\DB\\Migrations\\20250305153958_AddSeed_Adicional.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\firenzecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\trabajoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\trabajo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\turnoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\iturnoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8D4D72B-11AC-4DA3-8F64-1DA00474761F}|..\\Validations\\Validations.csproj|c:\\firenze\\backend\\validations\\crearturnovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\usuarioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,46 +31,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TrabajoService.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TrabajoService.cs",
-              "RelativeDocumentMoniker": "..\\Services\\TrabajoService.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\Services\\TrabajoService.cs",
-              "RelativeToolTip": "..\\Services\\TrabajoService.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAowIgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20250305153958_AddSeed_Adicional.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Migrations\\20250305153958_AddSeed_Adicional.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Migrations\\20250305153958_AddSeed_Adicional.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Migrations\\20250305153958_AddSeed_Adicional.cs",
+              "RelativeToolTip": "..\\DB\\Migrations\\20250305153958_AddSeed_Adicional.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T18:38:43.517Z",
+              "WhenOpened": "2025-03-05T15:39:58.935Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Trabajo.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Trabajo.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Trabajo.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Trabajo.cs",
+              "RelativeToolTip": "..\\DB\\Trabajo.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T15:03:27.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UsuarioService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\UsuarioService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\UsuarioService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\UsuarioService.cs",
+              "RelativeToolTip": "..\\Services\\UsuarioService.cs",
+              "ViewState": "AgIAAIgAAAAAAAAAAADwv1QAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T01:29:55.615Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CrearTurnoValidator.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Validations\\CrearTurnoValidator.cs",
+              "RelativeDocumentMoniker": "..\\Validations\\CrearTurnoValidator.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Validations\\CrearTurnoValidator.cs",
+              "RelativeToolTip": "..\\Validations\\CrearTurnoValidator.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwCcAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T01:07:33.072Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "UsuarioController.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\UsuarioController.cs",
-              "RelativeDocumentMoniker": "Controllers\\UsuarioController.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\UsuarioController.cs",
-              "RelativeToolTip": "Controllers\\UsuarioController.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAA5wDcAAAAJAAAAAAAAAA==",
+              "Title": "FirenzeContext.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\FirenzeContext.cs",
+              "RelativeDocumentMoniker": "..\\DB\\FirenzeContext.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\FirenzeContext.cs",
+              "RelativeToolTip": "..\\DB\\FirenzeContext.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAUwC0AAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T18:32:11.589Z",
+              "WhenOpened": "2025-03-04T23:36:13.668Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TrabajoController.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TrabajoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TrabajoController.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TrabajoController.cs",
-              "RelativeToolTip": "Controllers\\TrabajoController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAA3wEQAAAAgAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ITurnoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\ITurnoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\ITurnoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\ITurnoService.cs",
+              "RelativeToolTip": "..\\Services\\ITurnoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T17:55:40.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T21:47:40.723Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TurnoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\TurnoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
+              "RelativeToolTip": "..\\Services\\TurnoService.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wGUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T18:21:40.001Z"
             }
           ]
         }

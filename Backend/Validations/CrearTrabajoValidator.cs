@@ -17,8 +17,8 @@ namespace Validations
                 .MaximumLength(100).WithMessage("La descripcion no puede superar los 100 caracteres.");
 
             RuleFor(x => x.Precio_Tr)
-                 .NotEmpty().WithMessage("Debe ingresar un precio.")
-                 .LessThanOrEqualTo(0).WithMessage("El precio no puede ser menor que 0.");
+                 .NotNull().WithMessage("Debe ingresar un precio.")
+                 .GreaterThanOrEqualTo(0).WithMessage("El precio no puede ser menor que 0.");
 
             RuleFor(x => x.Adicional_Tr)
                  .NotNull().WithMessage("El campo adicional es requerido.");
