@@ -67,6 +67,18 @@
         }
       }
     },
+    "/api/TipoTrabajo": {
+      "get": {
+        "tags": [
+          "TipoTrabajo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Trabajo": {
       "post": {
         "tags": [
@@ -182,6 +194,28 @@
             "schema": {
               "type": "integer",
               "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Turno/Disponibles": {
+      "get": {
+        "tags": [
+          "Turno"
+        ],
+        "parameters": [
+          {
+            "name": "fechaIngresada",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "date"
             }
           }
         ],

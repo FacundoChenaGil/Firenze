@@ -23,6 +23,8 @@ builder.Services.AddFluentValidationAutoValidation();
 builder.Services.AddScoped<IUsuarioService, UsuarioService>();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITrabajoService, TrabajoService>();
+builder.Services.AddScoped<ITurnoService, TurnoService>();
+builder.Services.AddScoped<ITipoTrabajoService, TipoTrabajoService>();
 
 builder.Services.AddDbContext<FirenzeContext>(options =>
 {

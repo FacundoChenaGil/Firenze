@@ -32,6 +32,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FirenzeAPI.Controllers.TipoTrabajoController",
+    "Method": "GetAllTiposTrabajo",
+    "RelativePath": "api/TipoTrabajo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirenzeAPI.Controllers.TrabajoController",
     "Method": "CrearTrabajo",
     "RelativePath": "api/Trabajo",
@@ -106,6 +116,22 @@
         "Name": "idTrabajo",
         "Type": "System.Int32",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TurnoController",
+    "Method": "ObtenerTurnosDisponibles",
+    "RelativePath": "api/Turno/Disponibles",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fechaIngresada",
+        "Type": "System.DateOnly",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []

@@ -25,9 +25,36 @@ namespace Services
             _actualizarTurnoValidator = actualizarTurnoValidator;
         }
 
-        public async Task<bool> ExisteTurnoAsync(DateOnly fecha, TimeOnly hora)
+        public async Task<List<TimeOnly>> ObtenerTurnosDisponiblesAsync(DateOnly fechaIngresada)
         {
-            return await _context.Turnos.AnyAsync(x => x.Fecha_Tu == fecha && x.Hora_Tu == hora);
+            TimeOnly horaApertura = new(8, 0);
+            TimeOnly horaCierre = new(20, 0);
+            TimeSpan duracionBloque = TimeSpan.FromHours(1);
+
+            var estadosOcupados = new HashSet<int> { 2, 3, 4 };
+
+            var horariosOcupados = await _context.Turnos
+                .Where(t => t.Fecha_Tu == fechaIngresada && estadosOcupados.Contains(t.Id_Estado_Turno_Tu))
+                .Select(t => new
+                {
+                    HoraInicio = t.Hora_Tu,
+                    HoraFin = t.Hora_Tu.Add(t.Duracion_Tu.GetValueOrDefault())
+                })
+                .ToListAsync();
+
+            List<TimeOnly> horariosDisponibles = new List<TimeOnly>();
+
+            for(TimeOnly hora = horaApertura; hora <= horaCierre; hora = hora.Add(duracionBloque))
+            {
+                bool ocupado = horariosOcupados.Any(h => hora >= h.HoraInicio && hora <= h.HoraFin);
+
+                if(!ocupado)
+                {
+                    horariosDisponibles.Add(hora);
+                }
+            }
+
+            return horariosDisponibles;
         }
 
         public async Task<Result<TurnoDTO>> CrearTurnoAsync(CrearTurnoDTO turnoDTO)
@@ -42,66 +69,6 @@ namespace Services
 
                 return Result<TurnoDTO>.Failure(errors);
             }
-            /*
-            var turno = new Turno
-            {
-                Fecha_Tu = turnoDTO.Fecha_Tu,
-                Hora_Tu = turnoDTO.Hora_Tu,
-                Duracion_Tu = turnoDTO.Duracion_Tu,
-                Precio_Total_Tu = 0,
-                Seña_Tu = 0,
-                Id_Usuario_Tu = turnoDTO.Id_Usuario_Tu,
-                Id_Estado_Turno_Tu = 3
-            };
-
-            _context.Add(turno);
-            await _context.SaveChangesAsync();
-
-            decimal precioTotal = 0;
-            var trabajosXTurnos = new List<TrabajoXTurno>();
-            var descripcionesTrabajo = new List<string>();
-
-            foreach (int idTrabajo in turnoDTO.Ids_Trabajo)
-            {
-                var trabajo = await _context.Trabajos.FindAsync(idTrabajo);
-
-                if(trabajo != null)
-                {
-                    trabajosXTurnos.Add(new TrabajoXTurno
-                    {
-                        Id_Turno_Tt = turno.Id_Turno_Tu,
-                        Id_Trabajo_Tt = trabajo.Id_Trabajo_Tr
-                    });
-
-                    precioTotal += trabajo.Precio_Tr;
-                    descripcionesTrabajo.Add(trabajo.Descripcion_Tr);
-                }
-
-            }
-
-            if(trabajosXTurnos.Any())
-            {
-                await _context.AddRangeAsync(trabajosXTurnos);
-            }
-
-            turno.Precio_Total_Tu = precioTotal;
-            turno.Seña_Tu = precioTotal * 0.10m;
-
-            var turnoCreado = new TurnoDTO
-            {
-                Id_Turno_Tu = turno.Id_Turno_Tu,
-                Fecha_Tu = turno.Fecha_Tu,
-                Hora_Tu = turno.Hora_Tu,
-                Duracion_Tu = turno.Duracion_Tu,
-                Precio_Total_Tu = precioTotal,
-                Seña_Tu = turno.Seña_Tu,
-                Id_Usuario_Tu = turno.Id_Usuario_Tu,
-                Id_Estado_Turno_Tu = turno.Id_Estado_Turno_Tu,
-                DescripcionesTrabajo = descripcionesTrabajo
-            };
-
-            return Result<TurnoDTO>.Success(turnoCreado);
-            */
 
             throw new NotImplementedException();
 

@@ -10,7 +10,7 @@ namespace Services
 {
     public interface ITurnoService
     {
-        public Task<bool> ExisteTurnoAsync(DateOnly fecha, TimeOnly hora);
+        public Task<List<TimeOnly>> ObtenerTurnosDisponiblesAsync(DateOnly fechaIngresada);
         public Task<Result<TurnoDTO>> CrearTurnoAsync(CrearTurnoDTO turnoDTO);
         public Task<Result<TurnoDTO>> GetAllTurnosAsync(TurnoDTO turnoDTO);
         public Task<Result<TurnoDTO>> GetTurnoAsync(int idTurno);
