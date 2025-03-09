@@ -12,8 +12,8 @@ namespace Services
     {
         public Task<List<TimeOnly>> ObtenerTurnosDisponiblesAsync(DateOnly fechaIngresada);
         public Task<Result<TurnoCalculosResponseDTO>> CalcularTurnoAsync(List<int> idsTrabajo);
-        public Task<Result<TurnoDTO>> CrearTurnoAsync(CrearTurnoDTO turnoDTO);
-        public Task<Result<TurnoDTO>> GetAllTurnosAsync(TurnoDTO turnoDTO);
+        public Task<Result<bool>> CrearTurnoAsync(CrearTurnoDTO turnoDTO);
+        public Task<Result<List<TurnoDTO>>> GetAllTurnosAsync();
         public Task<Result<TurnoDTO>> GetTurnoAsync(int idTurno);
         public Task<Result<bool>> ActualizarTurnoAsync(int idTurno, ActualizarTurnoDTO turnoDTO);
         public Task<Result<bool>> EliminarTurnoAsync(int idTurno);

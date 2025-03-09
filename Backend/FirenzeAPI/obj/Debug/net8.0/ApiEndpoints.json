@@ -122,6 +122,32 @@
   },
   {
     "ContainingType": "FirenzeAPI.Controllers.TurnoController",
+    "Method": "GetAllTurnos",
+    "RelativePath": "api/Turno",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TurnoController",
+    "Method": "GetTurno",
+    "RelativePath": "api/Turno/{idTurno}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTurno",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TurnoController",
     "Method": "CalcularTurno",
     "RelativePath": "api/Turno/CalculoTurno",
     "HttpMethod": "POST",
@@ -131,6 +157,22 @@
       {
         "Name": "idsTrabajo",
         "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TurnoController",
+    "Method": "CrearTurno",
+    "RelativePath": "api/Turno/CrearTurno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "turnoDTO",
+        "Type": "DTOs.CrearTurnoDTO",
         "IsRequired": true
       }
     ],

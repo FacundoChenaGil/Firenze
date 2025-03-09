@@ -25,6 +25,7 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITrabajoService, TrabajoService>();
 builder.Services.AddScoped<ITurnoService, TurnoService>();
 builder.Services.AddScoped<ITipoTrabajoService, TipoTrabajoService>();
+builder.Services.AddScoped<ITrabajoXTurnoService, TrabajoXTurnoService>();
 
 builder.Services.AddDbContext<FirenzeContext>(options =>
 {

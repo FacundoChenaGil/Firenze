@@ -16,6 +16,6 @@ namespace DTOs
         public decimal Precio_Total_Tu { get; set; }
         public int Id_Usuario_Tu { get; set; }
         public int Id_Estado_Turno_Tu { get; set; }
-        public List<string> DescripcionesTrabajo { get; set; }
+        public List<int> Ids_Trabajo { get; set; }
     }
 }

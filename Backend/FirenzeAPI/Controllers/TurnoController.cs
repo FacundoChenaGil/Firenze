@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using DTOs;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Services;
 
@@ -31,6 +32,39 @@ namespace FirenzeAPI.Controllers
             return result.Map<IActionResult>(
                 onSuccess: calculoDTO => Ok(calculoDTO),
                 onFailure: error => BadRequest(error)
+                );
+        }
+
+        [HttpPost("CrearTurno")]
+        public async Task<IActionResult> CrearTurno(CrearTurnoDTO turnoDTO)
+        {
+            var result = await _turnoService.CrearTurnoAsync(turnoDTO);
+
+            return result.Map<IActionResult>(
+                onSuccess: ok => Ok(ok),
+                onFailure: error => BadRequest(error)
+                );
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAllTurnos()
+        {
+            var result = await _turnoService.GetAllTurnosAsync();
+
+            return result.Map<IActionResult>(
+                onSuccess: turnos => Ok(turnos),
+                onFailure: error => NotFound(error)
+                );
+        }
+
+        [HttpGet("{idTurno:int}")]
+        public async Task<IActionResult> GetTurno(int idTurno)
+        {
+            var result = await _turnoService.GetTurnoAsync(idTurno);
+
+            return result.Map<IActionResult>(
+                onSuccess: turno => Ok(turno),
+                onFailure: error => NotFound(error)
                 );
         }
 

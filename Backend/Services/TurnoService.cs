@@ -1,10 +1,12 @@
 ﻿using DB;
 using DTOs;
+using Microsoft.AspNetCore.SignalR.Protocol;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using Utilities;
@@ -17,13 +19,15 @@ namespace Services
         private readonly FirenzeContext _context;
         private readonly CrearTurnoValidator _crearTurnoValidator;
         private readonly ActualizarTurnoValidator _actualizarTurnoValidator;
+        private readonly ITrabajoXTurnoService _trabajoXTurnoService;
        
 
-        public TurnoService(FirenzeContext context, CrearTurnoValidator crearTurnoValidator, ActualizarTurnoValidator actualizarTurnoValidator)
+        public TurnoService(FirenzeContext context, CrearTurnoValidator crearTurnoValidator, ActualizarTurnoValidator actualizarTurnoValidator, ITrabajoXTurnoService trabajoXTurnoService)
         {
             _context = context;
             _crearTurnoValidator = crearTurnoValidator;
             _actualizarTurnoValidator = actualizarTurnoValidator;
+            _trabajoXTurnoService = trabajoXTurnoService;
         }
 
         public async Task<List<TimeOnly>> ObtenerTurnosDisponiblesAsync(DateOnly fechaIngresada)
@@ -47,7 +51,7 @@ namespace Services
 
             for(TimeOnly hora = horaApertura; hora <= horaCierre; hora = hora.Add(duracionBloque))
             {
-                bool ocupado = horariosOcupados.Any(h => hora >= h.HoraInicio && hora <= h.HoraFin);
+                bool ocupado = horariosOcupados.Any(h => hora >= h.HoraInicio && hora < h.HoraFin);
 
                 if(!ocupado)
                 {
@@ -96,7 +100,7 @@ namespace Services
             return Result<TurnoCalculosResponseDTO>.Success(turnoCalculo);
         }
 
-        public async Task<Result<TurnoDTO>> CrearTurnoAsync(CrearTurnoDTO turnoDTO)
+        public async Task<Result<bool>> CrearTurnoAsync(CrearTurnoDTO turnoDTO)
         {
             FluentValidation.Results.ValidationResult result = await _crearTurnoValidator.ValidateAsync(turnoDTO);
 
@@ -106,20 +110,94 @@ namespace Services
                     .Select(e => new Error(e.ErrorMessage, e.PropertyName))
                     .ToList();
 
-                return Result<TurnoDTO>.Failure(errors);
+                return Result<bool>.Failure(errors);
             }
 
-            throw new NotImplementedException();
+            var turnoCreado = new Turno
+            {
+                Fecha_Tu = turnoDTO.Fecha_Tu,
+                Hora_Tu = turnoDTO.Hora_Tu,
+                Duracion_Tu = turnoDTO.Duracion_Tu,
+                Precio_Total_Tu = turnoDTO.Precio_Total_Tu,
+                Seña_Tu = turnoDTO.Seña_Tu,
+                Id_Usuario_Tu = turnoDTO.Id_Usuario_Tu,
+                Id_Estado_Turno_Tu = 3
+            };
+
+            _context.Add(turnoCreado);
+            int rowsAffected = await _context.SaveChangesAsync();
+
+            if(rowsAffected == 0)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error("No se pudo generar el turno.", "CrearTurnoAsync") });
+            }
+
+            bool trabajosAsignados = await _trabajoXTurnoService.AsignarTrabajosTurnoAsync(turnoCreado.Id_Turno_Tu, turnoDTO.Ids_Trabajo);
+
+            if(!trabajosAsignados)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error("No se pudieron asignar los Trabajos.", "CrearTurnosAsync") });
+            }
+
+            return Result<bool>.Success(true);
 
         }
-        public async Task<Result<TurnoDTO>> GetAllTurnosAsync(TurnoDTO turnoDTO)
+        public async Task<Result<List<TurnoDTO>>> GetAllTurnosAsync()
         {
-            throw new NotImplementedException();
+            var turnos = await _context.Turnos
+                .GroupJoin(
+                _context.TrabajosXTurnos,
+                t => t.Id_Turno_Tu,
+                tt => tt.Id_Turno_Tt,
+                (t, trabajos) => new TurnoDTO
+                {
+                    Id_Turno_Tu = t.Id_Turno_Tu,
+                    Fecha_Tu = t.Fecha_Tu,
+                    Hora_Tu = t.Hora_Tu,
+                    Seña_Tu = t.Seña_Tu,
+                    Duracion_Tu = t.Duracion_Tu,
+                    Precio_Total_Tu = t.Precio_Total_Tu,
+                    Id_Usuario_Tu = t.Id_Usuario_Tu,
+                    Id_Estado_Turno_Tu = t.Id_Estado_Turno_Tu,
+                    Ids_Trabajo = trabajos.Select(t => t.Id_Trabajo_Tt).ToList()
+                })
+                .ToListAsync();
+                
+            if(turnos == null || !turnos.Any())
+            {
+                return Result<List<TurnoDTO>>.Failure(new List<Error> { new Error("No se encontraron Turnos.", "GetAllTurnosAsync") });
+            }
+
+            return Result<List<TurnoDTO>>.Success(turnos);
         }
 
         public async Task<Result<TurnoDTO>> GetTurnoAsync(int idTurno)
         {
-            throw new NotImplementedException();
+            var turno = await _context.Turnos
+                .GroupJoin(
+                _context.TrabajosXTurnos,
+                t => t.Id_Turno_Tu,
+                tt => tt.Id_Turno_Tt,
+                (t, trabajos) => new TurnoDTO
+                {
+                    Id_Turno_Tu = t.Id_Turno_Tu,
+                    Fecha_Tu = t.Fecha_Tu,
+                    Hora_Tu = t.Hora_Tu,
+                    Seña_Tu = t.Seña_Tu,
+                    Duracion_Tu = t.Duracion_Tu,
+                    Precio_Total_Tu = t.Precio_Total_Tu,
+                    Id_Usuario_Tu = t.Id_Usuario_Tu,
+                    Id_Estado_Turno_Tu = t.Id_Estado_Turno_Tu,
+                    Ids_Trabajo = trabajos.Select(t => t.Id_Trabajo_Tt).ToList()
+                })
+                .FirstOrDefaultAsync();
+
+            if (turno == null)
+            {
+                return Result<TurnoDTO>.Failure(new List<Error> { new Error($"No se encontro el Turno con id: {idTurno}.", "GetTurnoAsync") });
+            }
+
+            return Result<TurnoDTO>.Success(turno);
         }
 
         public async Task<Result<bool>> ActualizarTurnoAsync(int idTurno, ActualizarTurnoDTO turnoDTO)
@@ -130,7 +208,19 @@ namespace Services
 
         public async Task<Result<bool>> EliminarTurnoAsync(int idTurno)
         {
-            throw new NotImplementedException();
+            var turno = await _context.Turnos.FirstOrDefaultAsync(t => t.Id_Turno_Tu == idTurno);
+
+            if(turno == null)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el turno con id: {idTurno}.", "EliminarTurnoAsync") });
+            }
+
+            turno.Id_Estado_Turno_Tu = 2;
+
+            await _context.SaveChangesAsync();
+
+            return Result<bool>.Success(true);
+
         }
 
     }
