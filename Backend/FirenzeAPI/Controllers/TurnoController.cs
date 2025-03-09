@@ -23,5 +23,16 @@ namespace FirenzeAPI.Controllers
             return Ok(turnosDisponibles);
         }
 
+        [HttpPost("CalculoTurno")]
+        public async Task<IActionResult> CalcularTurno(List<int> idsTrabajo)
+        {
+            var result = await _turnoService.CalcularTurnoAsync(idsTrabajo);
+
+            return result.Map<IActionResult>(
+                onSuccess: calculoDTO => Ok(calculoDTO),
+                onFailure: error => BadRequest(error)
+                );
+        }
+
     }
 }

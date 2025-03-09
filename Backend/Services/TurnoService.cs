@@ -17,6 +17,7 @@ namespace Services
         private readonly FirenzeContext _context;
         private readonly CrearTurnoValidator _crearTurnoValidator;
         private readonly ActualizarTurnoValidator _actualizarTurnoValidator;
+       
 
         public TurnoService(FirenzeContext context, CrearTurnoValidator crearTurnoValidator, ActualizarTurnoValidator actualizarTurnoValidator)
         {
@@ -55,6 +56,44 @@ namespace Services
             }
 
             return horariosDisponibles;
+        }
+
+        public async Task<Result<TurnoCalculosResponseDTO>> CalcularTurnoAsync(List<int> idsTrabajo)
+        {
+            TimeSpan duracionTotal = TimeSpan.Zero;
+            decimal PrecioTotal = 0;
+            decimal seña;
+
+            List<TrabajoCalculoDTO> trabajosTurno = await _context.Trabajos
+                .Where(t => idsTrabajo.Contains(t.Id_Trabajo_Tr))
+                .Select(t => new TrabajoCalculoDTO
+                {
+                    Precio = t.Precio_Tr,
+                    Duracion = t.Duracion_Tr
+                })
+                .ToListAsync(); 
+
+            if(!trabajosTurno.Any())
+            {
+                return Result<TurnoCalculosResponseDTO>.Failure(new List<Error> { new Error("No se encontraron Trabajos con esos IDs.", "CalcularTurnoAsync") });
+            }
+
+            foreach(TrabajoCalculoDTO trabajo in trabajosTurno)
+            {
+                duracionTotal += trabajo.Duracion ?? TimeSpan.Zero;
+                PrecioTotal += trabajo.Precio;
+            }
+
+            seña = PrecioTotal * 0.10m;
+
+            TurnoCalculosResponseDTO turnoCalculo = new TurnoCalculosResponseDTO
+            {
+                Duracion = duracionTotal,
+                PrecioTotal = PrecioTotal,
+                Seña = seña
+            };
+
+            return Result<TurnoCalculosResponseDTO>.Success(turnoCalculo);
         }
 
         public async Task<Result<TurnoDTO>> CrearTurnoAsync(CrearTurnoDTO turnoDTO)

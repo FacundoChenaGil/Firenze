@@ -122,6 +122,22 @@
   },
   {
     "ContainingType": "FirenzeAPI.Controllers.TurnoController",
+    "Method": "CalcularTurno",
+    "RelativePath": "api/Turno/CalculoTurno",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idsTrabajo",
+        "Type": "System.Collections.Generic.List\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TurnoController",
     "Method": "ObtenerTurnosDisponibles",
     "RelativePath": "api/Turno/Disponibles",
     "HttpMethod": "GET",

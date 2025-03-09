@@ -3,11 +3,14 @@
   "WorkspaceRootPath": "C:\\Firenze\\Backend\\FirenzeAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\tipotrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\tipotrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AA6E99A-FF78-4342-A77D-1960ADE170CD}|..\\DTOs\\DTOs.csproj|c:\\firenze\\backend\\dtos\\crearturnodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\tipotrabajoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\turnoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\turnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\turnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,27 +25,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TipoTrabajoController.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TipoTrabajoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TipoTrabajoController.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TipoTrabajoController.cs",
-              "RelativeToolTip": "Controllers\\TipoTrabajoController.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAnAAAAAAAAAA==",
+              "Title": "CrearTurnoDTO.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DTOs\\CrearTurnoDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTOs\\CrearTurnoDTO.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DTOs\\CrearTurnoDTO.cs",
+              "RelativeToolTip": "..\\DTOs\\CrearTurnoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T23:23:56.975Z",
+              "WhenOpened": "2025-03-09T03:18:07.459Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TurnoController.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TurnoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TurnoController.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TurnoController.cs",
+              "RelativeToolTip": "Controllers\\TurnoController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwCAAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T03:01:16.21Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "TipoTrabajoService.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TipoTrabajoService.cs",
-              "RelativeDocumentMoniker": "..\\Services\\TipoTrabajoService.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\Services\\TipoTrabajoService.cs",
-              "RelativeToolTip": "..\\Services\\TipoTrabajoService.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAxwCMAAAAAAAAAAAAAAA==",
+              "Title": "TurnoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\TurnoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
+              "RelativeToolTip": "..\\Services\\TurnoService.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAtwG0AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T23:11:34.045Z",
+              "WhenOpened": "2025-03-08T13:51:12.167Z",
               "EditorCaption": ""
             }
           ]
