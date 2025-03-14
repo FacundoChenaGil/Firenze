@@ -68,5 +68,16 @@ namespace FirenzeAPI.Controllers
                 );
         }
 
+        [HttpPut("{idTurno:int}")]
+        public async Task<IActionResult> ActualizarTurno(int idTurno, ActualizarTurnoDTO turnoDTO)
+        {
+            var result = await _turnoService.ActualizarTurnoAsync(idTurno, turnoDTO);
+
+            return result.Map<IActionResult>(
+                onSuccess: ok => Ok(ok),
+                onFailure: errors => BadRequest(errors)
+                );
+        }
+
     }
 }

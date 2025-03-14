@@ -333,6 +333,46 @@
             "description": "OK"
           }
         }
+      },
+      "put": {
+        "tags": [
+          "Turno"
+        ],
+        "parameters": [
+          {
+            "name": "idTurno",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTurnoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTurnoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTurnoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/Usuario": {
@@ -485,6 +525,49 @@
           "id_Tipo_Trabajo_Tr": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "ActualizarTurnoDTO": {
+        "type": "object",
+        "properties": {
+          "fecha_Tu": {
+            "type": "string",
+            "format": "date"
+          },
+          "hora_Tu": {
+            "type": "string",
+            "format": "time"
+          },
+          "seña_Tu": {
+            "type": "number",
+            "format": "double"
+          },
+          "duracion_Tu": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "precio_Total_Tu": {
+            "type": "number",
+            "format": "double"
+          },
+          "id_Usuario_Tu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "id_Estado_Turno_Tu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ids_Trabajos": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

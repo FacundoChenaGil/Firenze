@@ -148,6 +148,27 @@
   },
   {
     "ContainingType": "FirenzeAPI.Controllers.TurnoController",
+    "Method": "ActualizarTurno",
+    "RelativePath": "api/Turno/{idTurno}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTurno",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "turnoDTO",
+        "Type": "DTOs.ActualizarTurnoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TurnoController",
     "Method": "CalcularTurno",
     "RelativePath": "api/Turno/CalculoTurno",
     "HttpMethod": "POST",

@@ -1,5 +1,6 @@
 ﻿using DB;
 using DTOs;
+using FluentValidation;
 using Microsoft.AspNetCore.SignalR.Protocol;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -202,7 +203,34 @@ namespace Services
 
         public async Task<Result<bool>> ActualizarTurnoAsync(int idTurno, ActualizarTurnoDTO turnoDTO)
         {
-            throw new NotImplementedException();
+            FluentValidation.Results.ValidationResult result = await _actualizarTurnoValidator.ValidateAsync(turnoDTO);
+
+            if (!result.IsValid)
+            {
+                var errors = result.Errors
+                    .Select(e => new Error(e.ErrorMessage, e.PropertyName))
+                    .ToList();
+
+                return Result<bool>.Failure(errors);
+            }
+
+            var turnoActualizado = await _context.Turnos.FirstOrDefaultAsync(t => t.Id_Turno_Tu == idTurno);
+
+            if(turnoActualizado == null)
+            {
+                return Result<bool>.Failure(new List<Error> { new Error($"No se encontro el usuario con id: {idTurno}.", "ActualizarTurnoAsync") });
+            }
+
+            turnoActualizado.Fecha_Tu = turnoDTO.Fecha_Tu;
+            turnoActualizado.Hora_Tu = turnoDTO.Hora_Tu;
+            turnoActualizado.Seña_Tu = turnoDTO.Seña_Tu;
+            turnoActualizado.Duracion_Tu = turnoDTO.Duracion_Tu;
+            turnoActualizado.Precio_Total_Tu = turnoDTO.Precio_Total_Tu;
+            turnoActualizado.Id_Estado_Turno_Tu = turnoDTO.Id_Estado_Turno_Tu;
+
+            await _context.SaveChangesAsync();
+
+            return Result<bool>.Success(true);
         }
 
 
