@@ -32,6 +32,85 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FirenzeAPI.Controllers.TarjetaTrabajoController",
+    "Method": "CrearTarjetaTrabajo",
+    "RelativePath": "api/TarjetaTrabajo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "tarjetaDTO",
+        "Type": "DTOs.CrearTarjetaTrabajoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TarjetaTrabajoController",
+    "Method": "GetAllTarjetasTrabajo",
+    "RelativePath": "api/TarjetaTrabajo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TarjetaTrabajoController",
+    "Method": "GetTarjetaTrabajo",
+    "RelativePath": "api/TarjetaTrabajo/{idTarjetaTrabajo}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTarjetaTrabajo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TarjetaTrabajoController",
+    "Method": "ActualizarTarjetaTrabajo",
+    "RelativePath": "api/TarjetaTrabajo/{idTarjetaTrabajo}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTarjetaTrabajo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "tarjetaDTO",
+        "Type": "DTOs.ActualizarTarjetaTrabajoDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.TarjetaTrabajoController",
+    "Method": "EliminarTarjetaTrabajo",
+    "RelativePath": "api/TarjetaTrabajo/{idTarjetaTrabajo}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idTarjetaTrabajo",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirenzeAPI.Controllers.TipoTrabajoController",
     "Method": "GetAllTiposTrabajo",
     "RelativePath": "api/TipoTrabajo",

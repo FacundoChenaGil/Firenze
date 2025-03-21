@@ -77,16 +77,15 @@ namespace DB.Migrations
 
                     b.Property<string>("Descripcion_Tar")
                         .IsRequired()
-                        .HasMaxLength(40)
-                        .HasColumnType("nvarchar(40)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("Id_Trabajo_Tar")
                         .HasColumnType("int");
 
                     b.Property<string>("Imagen_URL_Tar")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre_Tar")
                         .IsRequired()

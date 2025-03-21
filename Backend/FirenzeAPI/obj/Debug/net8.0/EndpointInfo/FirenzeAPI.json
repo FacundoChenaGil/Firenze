@@ -67,6 +67,131 @@
         }
       }
     },
+    "/api/TarjetaTrabajo": {
+      "post": {
+        "tags": [
+          "TarjetaTrabajo"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearTarjetaTrabajoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearTarjetaTrabajoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearTarjetaTrabajoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "TarjetaTrabajo"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/TarjetaTrabajo/{idTarjetaTrabajo}": {
+      "get": {
+        "tags": [
+          "TarjetaTrabajo"
+        ],
+        "parameters": [
+          {
+            "name": "idTarjetaTrabajo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "TarjetaTrabajo"
+        ],
+        "parameters": [
+          {
+            "name": "idTarjetaTrabajo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTarjetaTrabajoDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTarjetaTrabajoDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarTarjetaTrabajoDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "TarjetaTrabajo"
+        ],
+        "parameters": [
+          {
+            "name": "idTarjetaTrabajo",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/TipoTrabajo": {
       "get": {
         "tags": [
@@ -503,6 +628,32 @@
   },
   "components": {
     "schemas": {
+      "ActualizarTarjetaTrabajoDTO": {
+        "type": "object",
+        "properties": {
+          "id_Tarjeta_Trabajo_Tar": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre_Tar": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_Tar": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagen_URL_Tar": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_Trabajo_Tar": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
       "ActualizarTrabajoDTO": {
         "type": "object",
         "properties": {
@@ -596,6 +747,28 @@
             "nullable": true
           },
           "id_Tipo_Usuario_Us": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearTarjetaTrabajoDTO": {
+        "type": "object",
+        "properties": {
+          "nombre_Tar": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion_Tar": {
+            "type": "string",
+            "nullable": true
+          },
+          "imagen_URL_Tar": {
+            "type": "string",
+            "nullable": true
+          },
+          "id_Trabajo_Tar": {
             "type": "integer",
             "format": "int32"
           }

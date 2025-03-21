@@ -3,11 +3,18 @@
   "WorkspaceRootPath": "C:\\Firenze\\Backend\\FirenzeAPI\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\tarjetatrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\tarjetatrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\turnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\turnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\turnoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\trabajoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\tarjetatrabajoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -17,32 +24,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TurnoController.cs",
               "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TurnoController.cs",
               "RelativeDocumentMoniker": "Controllers\\TurnoController.cs",
               "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TurnoController.cs",
               "RelativeToolTip": "Controllers\\TurnoController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAYwCEAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T13:49:28.151Z",
+              "WhenOpened": "2025-03-21T12:49:01.149Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TurnoService.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
-              "RelativeDocumentMoniker": "..\\Services\\TurnoService.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
-              "RelativeToolTip": "..\\Services\\TurnoService.cs",
-              "ViewState": "AgIAAMsAAAAAAAAAAAA/wNUAAAANAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "TarjetaTrabajoController.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TarjetaTrabajoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TarjetaTrabajoController.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TarjetaTrabajoController.cs",
+              "RelativeToolTip": "Controllers\\TarjetaTrabajoController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowEgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-08T13:51:12.167Z",
+              "WhenOpened": "2025-03-21T12:41:11.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TrabajoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TrabajoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\TrabajoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\TrabajoService.cs",
+              "RelativeToolTip": "..\\Services\\TrabajoService.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T12:09:32.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TarjetaTrabajoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TarjetaTrabajoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\TarjetaTrabajoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\TarjetaTrabajoService.cs",
+              "RelativeToolTip": "..\\Services\\TarjetaTrabajoService.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAowI8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T11:28:47.463Z",
               "EditorCaption": ""
             }
           ]

@@ -18,11 +18,10 @@ namespace DB
         public string Nombre_Tar { get; set; }
 
         [Required]
-        [MaxLength(40)]
+        [MaxLength(100)]
         public string Descripcion_Tar { get; set; }
 
         [Required]
-        [MaxLength(50)]
         public string Imagen_URL_Tar { get; set; }
 
         public int Id_Trabajo_Tar { get; set; }

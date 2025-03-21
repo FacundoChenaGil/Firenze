@@ -26,6 +26,7 @@ builder.Services.AddScoped<ITrabajoService, TrabajoService>();
 builder.Services.AddScoped<ITurnoService, TurnoService>();
 builder.Services.AddScoped<ITipoTrabajoService, TipoTrabajoService>();
 builder.Services.AddScoped<ITrabajoXTurnoService, TrabajoXTurnoService>();
+builder.Services.AddScoped<ITarjetaTrabajoService, TarjetaTrabajoService>();
 
 builder.Services.AddDbContext<FirenzeContext>(options =>
 {
