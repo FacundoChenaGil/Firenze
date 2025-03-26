@@ -17,15 +17,11 @@ namespace Services
 {
     public class AuthService : IAuthService
     {
-        private readonly FirenzeContext _context;
-        private readonly CrearUsuarioValidator _crearUsuarioValidator;
         private readonly IUsuarioService _usuarioService;
         private readonly IConfiguration _configuration;
 
-        public AuthService(FirenzeContext context, CrearUsuarioValidator crearUsuarioValidator, IUsuarioService usuarioService, IConfiguration configuration)
+        public AuthService(IUsuarioService usuarioService, IConfiguration configuration)
         {
-            _context = context;
-            _crearUsuarioValidator = crearUsuarioValidator;
             _usuarioService = usuarioService;
             _configuration = configuration;
         }
