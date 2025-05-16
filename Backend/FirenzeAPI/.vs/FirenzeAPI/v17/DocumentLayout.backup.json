@@ -3,15 +3,22 @@
   "WorkspaceRootPath": "C:\\Firenze\\Backend\\FirenzeAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F35B581B-276F-4182-A8F6-8C90A6AAD249}|..\\Result\\Utilities.csproj|c:\\firenze\\backend\\result\\result.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{008DB49A-A65D-4B47-86FC-9A108A2528D6}|..\\DB\\DB.csproj|c:\\firenze\\backend\\db\\turno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\tarjetatrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\tarjetatrabajocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AA6E99A-FF78-4342-A77D-1960ADE170CD}|..\\DTOs\\DTOs.csproj|c:\\firenze\\backend\\dtos\\turnodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\controllers\\turnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:controllers\\turnocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6AA6E99A-FF78-4342-A77D-1960ADE170CD}|..\\DTOs\\DTOs.csproj|c:\\firenze\\backend\\dtos\\crearpreferenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6E99A-FF78-4342-A77D-1960ADE170CD}|..\\DTOs\\DTOs.csproj|c:\\firenze\\backend\\dtos\\turnocalculosresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6E99A-FF78-4342-A77D-1960ADE170CD}|..\\DTOs\\DTOs.csproj|c:\\firenze\\backend\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\turnoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,39 +33,80 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Result.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\Result\\Result.cs",
-              "RelativeDocumentMoniker": "..\\Result\\Result.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\Result\\Result.cs",
-              "RelativeToolTip": "..\\Result\\Result.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Turno.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DB\\Turno.cs",
+              "RelativeDocumentMoniker": "..\\DB\\Turno.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DB\\Turno.cs",
+              "RelativeToolTip": "..\\DB\\Turno.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAgwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T15:44:10.557Z",
+              "WhenOpened": "2025-05-15T17:52:10.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TurnoDTO.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DTOs\\TurnoDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTOs\\TurnoDTO.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DTOs\\TurnoDTO.cs",
+              "RelativeToolTip": "..\\DTOs\\TurnoDTO.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T17:43:32.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "..\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T17:40:15.999Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TurnoController.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TurnoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TurnoController.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TurnoController.cs",
-              "RelativeToolTip": "Controllers\\TurnoController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Title": "CrearPreferenciaDTO.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DTOs\\CrearPreferenciaDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTOs\\CrearPreferenciaDTO.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DTOs\\CrearPreferenciaDTO.cs",
+              "RelativeToolTip": "..\\DTOs\\CrearPreferenciaDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T12:49:01.149Z"
+              "WhenOpened": "2025-05-15T17:37:02.105Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TarjetaTrabajoController.cs",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TarjetaTrabajoController.cs",
-              "RelativeDocumentMoniker": "Controllers\\TarjetaTrabajoController.cs",
-              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\Controllers\\TarjetaTrabajoController.cs",
-              "RelativeToolTip": "Controllers\\TarjetaTrabajoController.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAowEgAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "TurnoCalculosResponseDTO.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DTOs\\TurnoCalculosResponseDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTOs\\TurnoCalculosResponseDTO.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DTOs\\TurnoCalculosResponseDTO.cs",
+              "RelativeToolTip": "..\\DTOs\\TurnoCalculosResponseDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T12:41:11.49Z"
+              "WhenOpened": "2025-05-15T15:35:16.031Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "TurnoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\TurnoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\TurnoService.cs",
+              "RelativeToolTip": "..\\Services\\TurnoService.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T15:42:31.726Z",
+              "EditorCaption": ""
             }
           ]
         }

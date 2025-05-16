@@ -187,3 +187,5 @@ C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\FirenzeAPI.genruntimeconfig.cache
 C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\ref\FirenzeAPI.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\MercadoPago.dll
+C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
