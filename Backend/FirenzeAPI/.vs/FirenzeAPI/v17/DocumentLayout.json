@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Firenze\\Backend\\FirenzeAPI\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|c:\\firenze\\backend\\firenzeapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A3D3B629-8617-4000-90ED-EC42FFF3E2B9}|FirenzeAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\mercadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\trabajoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CA770B59-8CB1-4DA4-B575-E1C7EE5D66B9}|..\\Services\\Services.csproj|c:\\firenze\\backend\\services\\imercadopagoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AA6E99A-FF78-4342-A77D-1960ADE170CD}|..\\DTOs\\DTOs.csproj|c:\\firenze\\backend\\dtos\\crearpreferenciadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +22,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IMercadoPagoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\IMercadoPagoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\IMercadoPagoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\IMercadoPagoService.cs",
+              "RelativeToolTip": "..\\Services\\IMercadoPagoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:32:53.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CrearPreferenciaDTO.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\DTOs\\CrearPreferenciaDTO.cs",
+              "RelativeDocumentMoniker": "..\\DTOs\\CrearPreferenciaDTO.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\DTOs\\CrearPreferenciaDTO.cs",
+              "RelativeToolTip": "..\\DTOs\\CrearPreferenciaDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:32:45.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TrabajoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\TrabajoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\TrabajoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\TrabajoService.cs",
+              "RelativeToolTip": "..\\Services\\TrabajoService.cs",
+              "ViewState": "AgIAACQAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T20:34:36.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Firenze\\Backend\\FirenzeAPI\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Firenze\\Backend\\FirenzeAPI\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-15T19:17:04.932Z",
+              "Title": "MercadoPagoService.cs",
+              "DocumentMoniker": "C:\\Firenze\\Backend\\Services\\MercadoPagoService.cs",
+              "RelativeDocumentMoniker": "..\\Services\\MercadoPagoService.cs",
+              "ToolTip": "C:\\Firenze\\Backend\\Services\\MercadoPagoService.cs",
+              "RelativeToolTip": "..\\Services\\MercadoPagoService.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAHoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-22T16:32:54.52Z",
               "EditorCaption": ""
             }
           ]
