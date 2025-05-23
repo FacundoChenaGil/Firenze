@@ -10,7 +10,7 @@ namespace Services
 {
     public interface IMercadoPagoService
     {
-        public async Task<Result<string>> CrearPreferenciaAsync(CrearPreferenciaDTO preferenciaDTO);
+        public Task<Result<string>> CrearPreferenciaAsync(CrearPreferenciaDTO preferenciaDTO);
 
     }
 }

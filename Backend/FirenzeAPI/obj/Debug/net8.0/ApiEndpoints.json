@@ -32,6 +32,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "FirenzeAPI.Controllers.MercadoPagoController",
+    "Method": "CrearPreferencia",
+    "RelativePath": "api/MercadoPago/CrearPreferencia",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "preferenciaDTO",
+        "Type": "DTOs.CrearPreferenciaDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FirenzeAPI.Controllers.MercadoPagoController",
+    "Method": "Ping",
+    "RelativePath": "api/MercadoPago/ping",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "FirenzeAPI.Controllers.TarjetaTrabajoController",
     "Method": "CrearTarjetaTrabajo",
     "RelativePath": "api/TarjetaTrabajo",

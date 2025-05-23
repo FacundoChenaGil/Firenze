@@ -67,6 +67,49 @@
         }
       }
     },
+    "/api/MercadoPago/CrearPreferencia": {
+      "post": {
+        "tags": [
+          "MercadoPago"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPreferenciaDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPreferenciaDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CrearPreferenciaDTO"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/MercadoPago/ping": {
+      "get": {
+        "tags": [
+          "MercadoPago"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/TarjetaTrabajo": {
       "post": {
         "tags": [
@@ -749,6 +792,68 @@
           "id_Tipo_Usuario_Us": {
             "type": "integer",
             "format": "int32"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CrearPreferenciaDTO": {
+        "type": "object",
+        "properties": {
+          "idUsuario": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fechaTurno": {
+            "type": "string",
+            "format": "date"
+          },
+          "horaTurno": {
+            "type": "string",
+            "format": "time"
+          },
+          "duracionTurno": {
+            "type": "string",
+            "format": "date-span",
+            "nullable": true
+          },
+          "seña": {
+            "type": "number",
+            "format": "double"
+          },
+          "precioTotal": {
+            "type": "number",
+            "format": "double"
+          },
+          "abonaTotal": {
+            "type": "boolean"
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "nombreCliente": {
+            "type": "string",
+            "nullable": true
+          },
+          "correoElectronico": {
+            "type": "string",
+            "nullable": true
+          },
+          "codigoArea": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "idsTrabajo": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false

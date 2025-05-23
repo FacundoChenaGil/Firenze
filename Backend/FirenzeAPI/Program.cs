@@ -27,6 +27,7 @@ builder.Services.AddScoped<ITurnoService, TurnoService>();
 builder.Services.AddScoped<ITipoTrabajoService, TipoTrabajoService>();
 builder.Services.AddScoped<ITrabajoXTurnoService, TrabajoXTurnoService>();
 builder.Services.AddScoped<ITarjetaTrabajoService, TarjetaTrabajoService>();
+builder.Services.AddScoped<IMercadoPagoService, MercadoPagoService>();
 
 builder.Services.AddDbContext<FirenzeContext>(options =>
 {
@@ -65,6 +66,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

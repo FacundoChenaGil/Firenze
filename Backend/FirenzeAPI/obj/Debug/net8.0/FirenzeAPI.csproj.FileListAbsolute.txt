@@ -172,12 +172,6 @@ C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\scopedcss\bundle\FirenzeAPI.style
 C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets\msbuild.FirenzeAPI.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets\msbuild.FirenzeAPI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets\msbuild.build.FirenzeAPI.props
-C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.FirenzeAPI.props
-C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.FirenzeAPI.props
-C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\FirenzeAPI.csproj.Up2Date
 C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\FirenzeAPI.dll
@@ -189,3 +183,4 @@ C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Microsoft.Bcl.Memory.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\MercadoPago.dll
 C:\Firenze\Backend\FirenzeAPI\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Firenze\Backend\FirenzeAPI\obj\Debug\net8.0\staticwebassets.build.json.cache
